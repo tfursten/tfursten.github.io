@@ -120,8 +120,9 @@ table#courses td {
 
 #header .img_left{
 	float:left;
-	margin-right: 10px;
-	width: 50px;
+	margin-right: 1px;
+	margin-left: 15px;
+	width: 80px;
 }
 
 #header .black_box{
