@@ -38,7 +38,7 @@ table#courses {
 }
 
 table#courses td {
-	padding: 5px;
+	padding: 1px;
 }
 
 
@@ -51,13 +51,13 @@ table#courses td {
 
 .leftcol{
 	width: 130px;
-	font-size: 14px;
+	font-size: 16px;
 	color: white;
 }
 
 .rightcol{
 	width: 290px;
-	font-size: 14px;
+	font-size: 16px;
 	color: white;
 }
 
@@ -70,7 +70,7 @@ table#courses td {
 	right: 0;
 	width: 100%;
 	height: 50px;
-	font-family: Arial;
+	font-family: "News Cycle", sans-serif;
 	text-shadow: 1px 1px 1px black;
 	border-bottom: 1px solid rgba(0,0,0,0.3);
 	background: rgba(0,0,0,0.2.5);
@@ -89,7 +89,7 @@ table#courses td {
 
 #header p{
 	color:white;
-	font-size:14px;
+	font-size:16px;
 	float: left;
 	padding: 0px 10px;
 	margin: 10px 0px;
@@ -163,7 +163,7 @@ table#courses td {
 #header_menu li{
 	list-style: none;
 	float: left;
-	font-size: 20px;
+	font-size: 17px;
 	padding: 12px 14px 14px 14px;
 	border-right: 1px solid rgba(0,0,0,0.4);
 	background: rgba(0,0,0,0.1);
@@ -175,12 +175,12 @@ table#courses td {
 
 #header_menu li a{
 	display:block;
-	color: #cccccc;
+	color: white;
 	text-decoration: none;
 }
 
 #header_menu li a:hover{
-	color: white;
+	color: #cccccc;
 }
 
 #header_menu.homeButton{
@@ -190,7 +190,7 @@ table#courses td {
 }
 
 #header_menu .homeButton a{
-	background: url("img/home.png") top left no-repeat;
+	background: url("img/home1.png") top left no-repeat;
 	width: 25px;
 	height: 25px;
 }
@@ -201,7 +201,7 @@ table#courses td {
 }
 
 #header_menu .homeButton a:hover{
-	background: url("img/home1.png") top left no-repeat;
+	background: url("img/home.png") top left no-repeat;
 }
 
 /* Program Menu Drop-down */
@@ -232,23 +232,23 @@ table#courses td {
 /* Drop-down default links */
 
 #header_menu li:hover a{
-	color: #aaaaaa;
+	color: white;
 }
 
 #header_menu li:hover a:hover{
-	color: white;
+	color: #aaaaaa;
 }
 
 #header_menu li:hover a.headerLinks{
 	font-size: 18px;
 	text-decoration: underline;
-	color: #cc0000;
+	color: white;
 	margin-top: 10px;
 	margin-left: 10px;
 }
 
 #header_menu li:hover a.headerLinks:hover{
-	color:white;
+	color: #cc0000 ;
 	cursor: pointer;
 }
 
@@ -256,12 +256,12 @@ table#courses td {
 
 #header_menu li:hover a.listLinks{
 	font-size: 16px;
-	color: #aaaaaa;
+	color: white ;
 	margin-left: 10px;
 }
 
 #header_menu li:hover a.listLinks:hover{
-	color: white;
+	color: #aaaaaa;
 	cursor:pointer;
 }
 
