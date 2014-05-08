@@ -1,10 +1,10 @@
 Raspberry Pi Setup
 =============
-###By Tara Furstenau
+By Tara Furstenau
 ----------------------  
 1. Configure Keyboard
 ---------------------------
-```bash
+```
 $ sudo nano /etc/default/keyboard
 ```  
 or  
@@ -76,9 +76,12 @@ above ```exit 0``` add ```su -l pi -c startx```
 9. Running Command-Line Script on Startup
 ----------------------------------------------------
 Create a new init file:  
-```$ sudo nano /etc/init.d/file_name```  
-Paste the following code into the editor window and save the file:  
 ```
+$ sudo nano /etc/init.d/file_name
+```  
+Paste the following code into the editor window and save the file: 
+
+	```
 	###BEGIN INIT INFO
 	# Provides: file_name
 	# Required-Start: $remote_fs $syslog $network
@@ -109,11 +112,13 @@ Paste the following code into the editor window and save the file:
 	;;
 	esac
 	exit 0
-```  
+	```  
 
 Make file executable for the owner:  
-```$ sudo chmod +x /etc/init.d/file_name```  
+```
+$ sudo chmod +x /etc/init.d/file_name
+```  
 Test with:  
 ```
 $ /etc/init.d/file_name start
-```  
+```
