@@ -79,38 +79,41 @@ Create a new init file:
 ```$ sudo nano /etc/init.d/file_name```  
 Paste the following code into the editor window and save the file:  
 ```
-###BEGIN INIT INFO
-# Provides: file_name
-# Required-Start: $remote_fs $syslog $network
-# Required-Stop: $remote_fs $syslog $network
-# Default-Start: 2 3 4 5
-# Default-Stop: 0 1 6
-# Short-Description: Simple Web Server
-# Description: Simple Web Server
-### END INIT INFO
-
-#! /bin/shutdown#
-# /etc/init.d/file_name
-
-export HOME
-case "$1" in 
-	start)
-		echo "Starting My Server"
-		sudo /usr/bin/python /home/pi/myserver.py 2>&1 &
+	###BEGIN INIT INFO
+	# Provides: file_name
+	# Required-Start: $remote_fs $syslog $network
+	# Required-Stop: $remote_fs $syslog $network
+	# Default-Start: 2 3 4 5
+	# Default-Stop: 0 1 6
+	# Short-Description: Simple Web Server
+	# Description: Simple Web Server
+	### END INIT INFO
+	
+	#! /bin/shutdown#
+	# /etc/init.d/file_name
+	
+	export HOME
+	case "$1" in 
+		start)
+			echo "Starting My Server"
+			sudo /usr/bin/python /home/pi/myserver.py 2>&1 &
+		;;
+	stop)
+		echo "Stopping My Server"
+		PID=`ps auxwww | grep myserver.py | head -1 | awk '{print $2}'`
+		kill -9 $PID
+		;;
+	*)
+		echo "Usage: /etc/init.d/file_name {start|stop}"
+		exit 1
 	;;
-stop)
-	echo "Stopping My Server"
-	PID=`ps auxwww | grep myserver.py | head -1 | awk '{print $2}'`
-	kill -9 $PID
-	;;
-*)
-	echo "Usage: /etc/init.d/file_name {start|stop}"
-	exit 1
-;;
-esac
-exit 0```  
+	esac
+	exit 0
+```  
 
 Make file executable for the owner:  
 ```$ sudo chmod +x /etc/init.d/file_name```  
 Test with:  
-```$ /etc/init.d/file_name start```  
+```
+$ /etc/init.d/file_name start
+```  
