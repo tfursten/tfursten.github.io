@@ -1,6 +1,6 @@
 
 html{
-	background: url("img/Pea-Plant-Genetics.jpg") no-repeat center center fixed;
+	background: url("img/green.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -278,10 +278,10 @@ table#courses td {
 #header .one_column_layout,
 #header .two_column_layout,
 #header .three_column_layout{
-	margin: 4px;
+	margin: 1px;
 	position:absolute;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	display: none;
 	text-align: left;
 }
