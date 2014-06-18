@@ -1,6 +1,6 @@
 
 html{
-	background: url("img/green.jpg") no-repeat center center fixed;
+	background: url("../img/green.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -190,7 +190,7 @@ table#courses td {
 }
 
 #header_menu .homeButton a{
-	background: url("img/home1.png") top left no-repeat;
+	background: url("../img/home1.png") top left no-repeat;
 	width: 25px;
 	height: 25px;
 }
@@ -201,7 +201,7 @@ table#courses td {
 }
 
 #header_menu .homeButton a:hover{
-	background: url("img/home.png") top left no-repeat;
+	background: url("../img/home.png") top left no-repeat;
 }
 
 /* Program Menu Drop-down */
