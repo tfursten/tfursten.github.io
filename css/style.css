@@ -28,9 +28,9 @@ body, button, input, select, textarea { font-family: "Quicksand", sans-serif; co
 .accordion section h2 a{padding:8px 10px;display:block; font-size:20px; font-weight:normal;color:#9CBA7F; text-decoration:none; }
 
 /*set style of closed slide*/
-.accordion section{ float:left;	overflow:hidden; color:#526F35; cursor:pointer; background: #526F35; margin:3px; }
+.accordion section{float:left; overflow:hidden; color:#526F35; cursor:pointer; background: #526F35; margin:3px; }
 .accordion section:hover {background:#567E3A;}
-.accordion section p { display:none; }
+.accordion section p { display:inline; }
 .accordion section:after{position:relative;font-size:24px;color:#000;font-weight:bold;}
 .accordion section:nth-child(1):after{content:;}
 .accordion section:nth-child(2):after{content:;}
@@ -74,11 +74,11 @@ body, button, input, select, textarea { font-family: "Quicksand", sans-serif; co
 
 /*Vertical Accordion *************************************************************************/
 .vertical section{ width:100%; height:60px;
-	-webkit-transition:height 0.2s ease-out;
-	-moz-transition:height 0.2s ease-out;
-  	-o-transition:height 0.2s ease-out;
-	-ms-transition:height 0.2s ease-out;
-  	transition:height 0.2s ease-out;
+	-webkit-transition:height 0.1s ease-out;
+	-moz-transition:height 0.1s ease-out;
+  	-o-transition:height 0.1s ease-out;
+	-ms-transition:height 0.1s ease-out;
+  	transition:height 0.1s ease-out;
 }
 /*Set height of the slide*/
 .vertical :target{ height:100%; width:97%; }
