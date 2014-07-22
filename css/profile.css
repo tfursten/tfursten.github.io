@@ -137,3 +137,44 @@ body{
 #infobox #notifications li:hover{
 	margin-top: -2px;
 }
+
+
+table#contact {
+	width: 100%;
+}
+
+table#contact td {
+	padding: 5px;
+}
+
+
+.leftcol{
+	width: 30px;
+	vertical-align: top;
+	text-align: center;
+	margin-top: -10px;
+}
+
+.midcol{
+	font-size: 16px;
+	font-weight: bold;
+	width: auto;
+	vertical-align: top;
+
+}
+
+.rightcol{
+	width: auto;
+	font-size: 16px;
+	vertical-align: top;
+}
+
+#contact a{
+		font-size: 16px;
+		text-decoration: none;
+		color: #3B5323;
+}
+
+#contact a:hover{
+	font-weight: bold;
+}

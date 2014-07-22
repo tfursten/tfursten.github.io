@@ -20,11 +20,11 @@ body, button, input, select, textarea { font-family: "Quicksand", sans-serif; co
 
 /*General Accordion****************************************************************************/
 /*Set style of open slide*/
-.accordion section:target { background:#CFDBC5; padding:10px;}
+.accordion section:target { background:#CFDBC5; padding:10px; cursor:default;}
 .accordion section:target:hover { background:#CFDBC5;}
-.accordion section:target h2 {width:100%;}
-.accordion section:target h2 a{ color:#3B5323; padding:0;}
-.accordion section:target p {display:block;}
+.accordion section:target h2 {width:100%; background:#526F35;}
+.accordion section:target h2 a{color:#9CBA7F; padding:10px;}
+.accordion section:target p {display:block;width:100%;}
 .accordion section h2 a{padding:8px 10px;display:block; font-size:20px; font-weight:normal;color:#9CBA7F; text-decoration:none; }
 
 /*set style of closed slide*/
