@@ -31,6 +31,16 @@ body{
 
 }
 
+a{
+	font-size: 16px;
+	text-decoration: none;
+	color: #3B5323;
+}
+
+a:hover{
+	font-weight: bold;
+}
+
 #main{
 	position: fixed;
 	top: 0px;
@@ -169,12 +179,3 @@ table#contact td {
 	vertical-align: top;
 }
 
-#contact a{
-		font-size: 16px;
-		text-decoration: none;
-		color: #3B5323;
-}
-
-#contact a:hover{
-	font-weight: bold;
-}
