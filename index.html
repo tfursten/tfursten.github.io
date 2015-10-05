@@ -1,132 +1,89 @@
-<!doctype html>
-<html class="no-js" lang="en">
-	<head>
-		<link rel="stylesheet" href="css/style.css" />
-		<!--[if lt IE 9]>
-		  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+---
+layout: default
+---
+<div class="home">
 
-		<link rel="stylesheet" href="css/profile.css" type="text/css" />
-		<link rel="shortcut icon" href="green_leaf-favicon.ico">
-		<link href="http://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet" type="text/css"/>
-		<link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
-	</head>
-
-<body>
-	<div id="profile">
-		<div id="circle">
-		<div class="circular">
-		</div> </div>
-	<div id="infobox">
-		<h1> tara furstenau </h1>
-		<h3> Molecular and Cellular Biology Ph.D Candidate </h3>
-		<p>Center for Evolutionary Medicine and Informatics <br>&middot;<br>
-		The Biodesign Institute<br>&middot;<br>
-		Arizona State University <br>
-			Tempe, Arizona</p>
-	
-
-		<ul id="notifications">
-		<li><a href="mailto:tfursten@asu.edu" class = "notifications"><img src="img/e-Mail.png"></a></li>
-		<li><a href="https://github.com/tfursten" class="notifications"><img src="img/github.png"></a></li>
-		<li><a href="http://www.linkedin.com/pub/tara-furstenau/74/b3/491" class="notifications"><img src="img/linkedin.png"></a></li>
-		<li><a href="https://plus.google.com/104671580207060240489/about" class="notifications"><img src="img/google+.png"></a></li>
-		<li><a href="https://www.facebook.com/tara.furstenau" class="notifications"><img src="img/facebook.png"></a></li>
-		<li><a href="https://twitter.com/tara_furstenau" class = "notifications"><img src="img/twitter.png"></a></li>
-		</ul>
-
-
-	
-	
+<div class="site-header-container {% if site.cover %}has-cover{% endif %}" {% if site.cover %}style="background-image: url({{ site.cover | prepend: site.baseurl }});"{% endif %}>
+	<div class="scrim {% if site.cover %}has-cover{% endif %}">
+		<header class="site-header">
+		  <h1 class="title">{{ site.title }}</h1>
+		  {% if site.subtitle %}<p class="subtitle">{{ site.subtitle }}</p>{% endif %}
+		</header>
 	</div>
-	</div>
-	<div id="main">
+</div>
 
-	<div class="accordion vertical">
-		  <section id="About">
-		      <h2><a href="#About"><img src="img/glyphicons_035_woman.png">   About Me </a></h2>
-		      <p>I am a Ph.D Candidate in Molecular and Cellular Biology working in the <a href="http://cartwrig.ht/"><b>Cartwright</b></a> lab in the The Biodesign Institute Center for Evolutionary Medicine and Informatics at Arizona State University. I am interested in developing computer simulations and algorithms to model and study various evolutionary and population genetic processes.
-		      I am currently working on models to investigate the evolution of plant self-incompatibility systems in the prevention of biparental inbreeding, the effect of different dispersal kernels on isolation-by-distance and estimating neighborhood size using composite marginal likelihoods.</p>
-		  </section>
-		  <section id="Contact">
-		      <h2><a href="#Contact"><img src="img/glyphicons_353_nameplate_alt.png"> Contact</a></h2>
+<div class="wrapper">
+<ul class="post-list">
+  {% for post in paginator.posts %}
+  <li>
+    <h2>
+      <a class="post-link" href="{{ post.url | remove_first: '/' | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+    </section>
+    <section class="post-meta">
+    	<div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+    	<div class="post-categories">
+    	{% if post.categories %}in {% for cat in post.categories %}
+    	  {% if site.jekyll-archives %}
+    		<a href="{{ site.baseurl }}category/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
+    	  {% else %}
+    	  <span>{{ cat | capitalize }}</span>{% if forloop.last == false %}, {% endif %}
+    	  {% endif %}
+    	{% endfor %}{% endif %}
+    	</div>
+    </section>
+  </li>
+  {% if forloop.last == false %}
+  <hr>
+  {% endif %}
+  {% endfor %}
+</ul>
 
-		      <table id="contact">
-		      	<tbody>
-		      		<tr>
-		      			<td class = "leftcol"><img src="img/glyphicons_035_woman_dark.png"></td>
-		      			<td class = "midcol">Name:</td>
-		      			<td class = "rightcol">Tara Furstenau</td>
-		      		</tr>
+<nav class="pagination" role="navigation">
+	<p>
+    {% if paginator.next_page %}
+    <a class="newer-posts" href="{{ site.baseurl }}page{{paginator.next_page}}">
+	    <span class="fa-stack fa-lg">
+			  <i class="fa fa-square fa-stack-2x"></i>
+			  <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+			</span>
+		</a>
+    {% else %}
+    <span class="fa-stack fa-lg">
+			<i class="fa fa-square fa-stack-2x"></i>
+			<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+		</span>
+    {% endif %}
+    <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.previous_page %}
+      {% if paginator.page == 2 %}
+      <a class="newer-posts" href="{{ site.baseurl }}">
+		    <span class="fa-stack fa-lg">
+				  <i class="fa fa-square fa-stack-2x"></i>
+				  <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+      {% else %}
+      <a class="newer-posts" href="{{ site.baseurl }}page{{paginator.previous_page}}">
+		    <span class="fa-stack fa-lg">
+				  <i class="fa fa-square fa-stack-2x"></i>
+				  <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+      {% endif %}
+    {% else %}
+    <span class="fa-stack fa-lg">
+		  <i class="fa fa-square fa-stack-2x"></i>
+		  <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+		</span>
+    {% endif %}
+  </p>
+  <p>
+    <a href="{{ site.baseurl }}posts">View All Posts by Category</a>
+  </p>
+</nav>
 
-		      		<tr>
-		      			<td class = "leftcol"><img src="img/glyphicons_242_google_maps.png"></td>
-		      			<td class = "midcol">Address:</td>
-		      			<td class = "rightcol"><a href="http://biodesign.asu.edu/">Center for Evolutionary Medicine and Informatics<br>
-		      			The Biodesign Institute at Arizona State University<br> PO Box 875301<br> Tempe, Arizona 85287-5301</td></a>
-		      		</tr>
-
-		      		<tr>
-		      			<td class = "leftcol"><img src="img/glyphicons_442_earphone.png"></td>
-		      			<td class = "midcol">Google Voice:</td>
-		      			<td class = "rightcol">(702) 907-8272<form method="post" action="https://clients4.google.com/voice/embed/webButtonConnect">
-						<input type="hidden" name="buttonId" value="f2107674d9240a811668ac324f7d8a617b0456f5" />
-						Caller Number:
-						<input type="text" name="callerNumber" />
-						<br />
-						Caller Name :
-						<input type="text" name="name" />
-						<br />
-						Show Caller Number :
-						<input type="checkbox" value="1" name="showCallerNumber" checked="checked" />
-						<br />
-						<button type="submit">Call Me</button>
-						<form>
-					</td>
-
-		      		</tr>
-
-		      		<tr>
-		      			<td class = "leftcol"><img src="img/e-Mail_dark.png"></td>
-		      			<td class = "midcol">Email:</td>
-		      			<td class = "rightcol"><a href="mailto:tfursten@asu.edu">tfursten@asu.edu</a></td>
-		      		</tr>
-
-		      		<tr>
-		      			<td class = "leftcol"><img src="img/glyphicons_340_globe.png"></td>
-		      			<td class = "midcol">Website:</td>
-		      			<td class = "rightcol"><a href="http://tfursten.github.io">tfursten.github.io</a></td>
-		      		</tr>		      		
-		      	</tbody>
-		      </table>
-		  </section>
-		  <section id="CV">
-		      <h2><a href="#CV"><img src="img/glyphicons_157_show_thumbnails_with_lines.png"> CV</a></h2>
-		      	<a href="pdfs/TaraFurstenauCV.pdf"><img src="img/glyphicons_181_download_alt.png">  Download PDF</a>
-		  </section>
-		  <!--
-		  <section id="Blog">
-		      <h2><a href="#Blog"><img src="img/glyphicons_300_microphone.png"> Blog</a></h2>
-		      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id lobortis massa. Nunc viverra velit leo, sit amet elementum mi. Fusce posuere nunc a mi tempus malesuada. Curabitur facilisis rhoncus eros eget placerat. Aliquam semper mauris sit amet justo tempor nec lacinia magna molestie. Etiam placerat congue dolor vitae adipiscing. Aliquam ac erat lorem, ut iaculis justo. Etiam mattis dignissim gravida. Aliquam nec justo ante, non semper mi. Nulla consectetur interdum massa, vel porta enim vulputate sed. Maecenas elit quam, egestas eget placerat non, fringilla vel eros. Nam vehicula elementum nulla sed consequat. Phasellus eu erat enim. Praesent at magna non massa dapibus scelerisque in eu lorem.</p>
-		  </section>
-		  -->
-		  <section id="Projects">
-		      <h2><a href="#Projects"><img src="img/glyphicons_341_briefcase.png"> Projects</a></h2>
-		      <ul id="notifications">
-		      	<li> The effect of the dispersal kernal on isolation by distance in a continuous population</li>
-		      	<a href="https://github.com/tfursten/IBD"><b>Github</b></a>
-		      	<a href="http://arxiv.org/pdf/1501.01085v1.pdf"><b>PDF</b></a>
-		      	<li>Evolution of Self-Incompatibility: Investigating the role of self-incompatibility systems in
-				the prevention of biparental inbreeding.</li>
-			<a href="https://github.com/tfursten/SI-cpp"><b>Github</b></a>
-			<li>Bayesian estimation of neighborhood size using composite marginal likelihoods</li>
-			<a href="https://github.com/tfursten/nbmcmc"><b>Github</b></a>
-		      	
-		      </ul>
-		  </section>
-		</div>
-	</div>
-</body>
-</html>
-
+</div>
+</div>
