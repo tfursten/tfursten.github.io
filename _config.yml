@@ -18,7 +18,7 @@ paginate_path: "/page:num/"
 
 
 # Disqus comments
-disqus_shortname: tfurstenau
+disqus_shortname: tfursten
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
