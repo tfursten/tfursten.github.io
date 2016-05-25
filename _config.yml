@@ -1,19 +1,19 @@
 # External gems
-gems:
-  - jekyll-sitemap
+gems: [jekyll-gist, jekyll-sitemap]
 
 # Site settings
 title: Tara Furstenau
 #subtitle: "A simple yet classy theme for your Jekyll website or blog"
 email: tarafurstenau@gmail.com
-name: Tara Furstenau 
+name: Tara Furstenau
 baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://tfursten.github.io" # the base hostname & protocol for your site
 cover: "assets/header_image.jpg"
 logo: "assets/logo.png"
 # Build settings
 markdown: kramdown
-paginate: 5
+gems: [jekyll-paginate]
+paginate: 2
 paginate_path: "/page:num/"
 
 
@@ -36,9 +36,9 @@ disqus_shortname: tfursten
 # Social settings are used in two places:
 # * In the footer, as links to your personal profiles
 # * After each blog post for sharing widgets
-# 
+#
 # Example:
-# 
+#
 # social:
 #   - name: Twitter                         # Name of the service
 #     icon: twitter                         # Font Awesome icon to use (minus fa- prefix)
@@ -96,74 +96,74 @@ social:
 
 #  - name: YouTube
 #    icon: youtube
-#    username: 
-#    url: 
+#    username:
+#    url:
 #    desc: Subscribe on YouTube
-#    share_url: 
-#    share_title: 
+#    share_url:
+#    share_title:
 #    share_link:
 
 #  - name: Instagram
 #    icon: instagram
-#    username: 
-#    url: 
+#    username:
+#    url:
 #    desc: Follow me on Instagram
-#    share_url: 
-#    share_title: 
+#    share_url:
+#    share_title:
 #    share_link:
 
 #  - name: Pinterest
 #    icon: pinterest
-#    username: 
-#    url: 
+#    username:
+#    url:
 #    desc: Follow me on Pinterest
-#    share_url: 
-#    share_title: 
+#    share_url:
+#    share_title:
 #    share_link:
 
 #  - name: SoundCloud
 #    icon: soundcloud
-#    username: 
-#    url: 
+#    username:
+#    url:
 #    desc: Follow me on SoundCloud
-#    share_url: 
-#    share_title: 
+#    share_url:
+#    share_title:
 #    share_link:
 
 #  - name: Tumblr
 #    icon: tumblr
-#    username: 
-#    url: 
+#    username:
+#    url:
 #    desc: Follow me on Tumblr
-#    share_url: 
-#    share_title: 
+#    share_url:
+#    share_title:
 #    share_link:
 
 #  - name: Steam
 #    icon: steam
-#    username: 
-#    url: 
+#    username:
+#    url:
 #    desc: Friend me on Steam
-#    share_url: 
-#    share_title: 
+#    share_url:
+#    share_title:
 #    share_link:
 
 #  - name: Dribbble
 #    icon: dribbble
-#    username: 
-#    url: 
+#    username:
+#    url:
 #    desc: Follow me on Dribble
 
 #  - name: Vimeo
 #    icon: vimeo-square
-#    username: 
-#    url: 
+#    username:
+#    url:
 #    desc: Follow me on Vimeo
 
 #  - name: Vine
 #    icon: vine
-#    username: 
-#    url: 
+#    username:
+#    url:
 #    desc: Follow me on Vine
 
 # Social sharing protocols

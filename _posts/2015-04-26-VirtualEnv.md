@@ -4,10 +4,10 @@ title:  "Python Virtual Environments"
 date:   2015-04-26 08:43:59
 author: Tara Furstenau
 categories: Programming
-tags:	python 
+tags:	python
 cover:  "assets/instacode.png"
 ---
-Often times a Python project will require a specific package version that is different than the global package. Virtual environments are helpful in this scenario because they create an isolated Python environment within a directory with its own set of packages.  If virtualenv is installed, this will allow a user to install packages using pip without requiring root access. 
+Often times a Python project will require a specific package version that is different than the global package. Virtual environments are helpful in this scenario because they create an isolated Python environment within a directory with its own set of packages.  If virtualenv is installed, this will allow a user to install packages using pip without requiring root access.
 
 To install virtualenv:
 
@@ -35,13 +35,13 @@ To leave the virtual environment
 
 	$ deactivate
 
-To delete a virtual environment 
+To delete a virtual environment
 
 	$ rm -rf env_name
 
 From [http://docs.python-guide.org/en/latest/dev/virtualenvs/](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
 
-###Duplicate a virtual environment
+### Duplicate a virtual environment
 Generate a requirements file that contains all of the packages installed on the virtual environment.  
 
 	pip freeze > requirements.txt
