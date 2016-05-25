@@ -100,14 +100,16 @@ pre code.hljs {
 *	Header
 */
 .navigation {
-	box-shadow: 0 2px $highlight-color;
+	box-shadow: 0 2px $white;
 	padding: 0 1em;
 	margin: 0;
+	background-color: $highlight-color;
 	/*
 	*	Navigation Menu - http://refills.bourbon.io/unstyled/ (see "Navigation")
 	*/
   // Mobile view
   .navigation-menu-button {
+		color: $white;
     display: block;
     float: right;
     margin: 0;
@@ -130,6 +132,7 @@ pre code.hljs {
     	padding-left: $em-base;
     }
     img {
+			filter: invert(10%);
       max-height: 2.5em;
       margin-top: 0.75em;
       padding-right: 1em;
@@ -177,6 +180,7 @@ pre code.hljs {
   }
   li.nav-link {
   	a {
+			color: $white;
 	    display: inline-block;
 	    @include media ($tablet) {
 	      padding-right: 1.5em;
