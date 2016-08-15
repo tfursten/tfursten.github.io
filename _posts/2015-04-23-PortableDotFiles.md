@@ -82,7 +82,7 @@ Move to home directory of new machine
 
 Make script executable
 
-	chmod _x makesymlinks.sh
+	chmod +x makesymlinks.sh
 
 Run script
 
