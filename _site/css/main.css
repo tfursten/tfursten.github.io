@@ -7,7 +7,7 @@ button {
   -o-appearance: none;
   appearance: none;
   -webkit-font-smoothing: antialiased;
-  background-color: #056571;
+  background-color: #034d03;
   border-radius: 3px;
   border: none;
   color: #fff;
@@ -25,7 +25,7 @@ button {
   button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
   button:hover,
   button:focus {
-    background-color: #022428;
+    background-color: #000300;
     color: #fff; }
   button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled,
   button:disabled {
@@ -74,8 +74,8 @@ textarea {
   input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, textarea:focus,
   select[multiple=multiple]:focus,
   textarea:focus {
-    border-color: #056571;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(4, 79, 89, 0.7);
+    border-color: #034d03;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(2, 52, 2, 0.7);
     outline: none; }
 
 textarea {
@@ -180,30 +180,28 @@ h1 {
   font-size: 2.0736em; }
 
 h2 {
-  font-size: 1.728em;
-  color: #056571; }
+  font-size: 1.728em; }
 
 h3 {
-  font-size: 1.44em;
-  color: #056571; }
+  font-size: 1.44em; }
 
 h4 {
   font-size: 1.2em; }
 
 h5 {
-  font-size: 0.8333333333em; }
+  font-size: 0.83333em; }
 
 h6 {
-  font-size: 0.6944444444em; }
+  font-size: 0.69444em; }
 
 p {
   margin: 0 0 14.4px; }
 
 a {
-  color: #056571;
+  color: #034d03;
   text-decoration: none; }
   a:active, a:focus, a:hover {
-    color: #033940;
+    color: #011c01;
     text-decoration: underline; }
   a:active, a:focus {
     outline: none; }
@@ -244,7 +242,7 @@ code {
   padding: 0 3px; }
 
 pre code.hljs {
-  font-size: 0.8333333333em; }
+  font-size: 0.83333em; }
 
 .page-divider {
   display: block;
@@ -282,7 +280,7 @@ pre code.hljs {
     background-position: 50% 50%;
     background-size: cover; }
     .site-header-container.has-cover .title, .post-header-container.has-cover .title {
-      font-size: 2.985984em; }
+      font-size: 2.98598em; }
     .site-header-container.has-cover .subtitle, .site-header-container.has-cover .info, .post-header-container.has-cover .subtitle, .post-header-container.has-cover .info {
       font-size: 1.2em; }
   .site-header-container .scrim, .post-header-container .scrim {
@@ -298,15 +296,13 @@ pre code.hljs {
 *	Header
 */
 .navigation {
-  box-shadow: 0 2px #fff;
+  box-shadow: 0 2px #568856;
   padding: 0 1em;
   margin: 0;
-  background-color: #056571;
   /*
   *	Navigation Menu - http://refills.bourbon.io/unstyled/ (see "Navigation")
   */ }
   .navigation .navigation-menu-button {
-    color: #fff;
     display: block;
     float: right;
     margin: 0;
@@ -335,7 +331,6 @@ pre code.hljs {
       .navigation .logo {
         padding-left: 16px; } }
     .navigation .logo img {
-      filter: invert(10%);
       max-height: 2.5em;
       margin-top: 0.75em;
       padding-right: 1em; }
@@ -374,7 +369,6 @@ pre code.hljs {
         text-decoration: none;
         width: auto; } }
   .navigation li.nav-link a {
-    color: #fff;
     display: inline-block; }
     @media screen and (min-width: 768px) {
       .navigation li.nav-link a {
@@ -419,8 +413,8 @@ pre code.hljs {
     .page-content .post-meta .post-date {
       float: left;
       display: block;
-      margin-right: 2.3576515979%;
-      width: 48.821174201%;
+      margin-right: 2.35765%;
+      width: 48.82117%;
       text-align: left;
       font-size: 0.9em; }
       .page-content .post-meta .post-date:last-child {
@@ -428,8 +422,8 @@ pre code.hljs {
     .page-content .post-meta .post-categories {
       float: left;
       display: block;
-      margin-right: 2.3576515979%;
-      width: 48.821174201%;
+      margin-right: 2.35765%;
+      width: 48.82117%;
       margin-right: 0;
       text-align: right;
       font-size: 0.9em; }
@@ -437,8 +431,6 @@ pre code.hljs {
         margin-right: 0; }
   .page-content .pagination {
     padding-top: 2em;
-    margin: auto;
-    align-items: center;
     text-align: center;
     color: #999; }
     .page-content .pagination .page-number {
@@ -446,9 +438,9 @@ pre code.hljs {
   .page-content .site-header-container {
     color: #fff;
     text-shadow: 0 2px 1px rgba(0, 0, 0, 0.33);
-    background-color: #056571; }
+    background-color: #568856; }
     .page-content .site-header-container .site-header .title {
-      font-size: 2.985984em; }
+      font-size: 2.98598em; }
     .page-content .site-header-container .site-header .subtitle {
       font-style: italic;
       font-size: 1.2em; }
@@ -470,7 +462,7 @@ pre code.hljs {
     margin: 1em 0 0 0;
     float: left;
     display: block;
-    margin-right: 2.3576515979%;
+    margin-right: 2.35765%;
     width: 100%; }
     .page-content .post .rss:last-child {
       margin-right: 0; }
@@ -479,8 +471,8 @@ pre code.hljs {
         margin: 1em 0;
         float: left;
         display: block;
-        margin-right: 2.3576515979%;
-        width: 48.821174201%; }
+        margin-right: 2.35765%;
+        width: 48.82117%; }
         .page-content .post .rss:last-child {
           margin-right: 0; } }
   .page-content .post .share {
@@ -488,7 +480,7 @@ pre code.hljs {
     margin: 0 0 1em 0;
     float: left;
     display: block;
-    margin-right: 2.3576515979%;
+    margin-right: 2.35765%;
     width: 100%; }
     .page-content .post .share:last-child {
       margin-right: 0; }
@@ -496,8 +488,8 @@ pre code.hljs {
       .page-content .post .share {
         float: left;
         display: block;
-        margin-right: 2.3576515979%;
-        width: 48.821174201%;
+        margin-right: 2.35765%;
+        width: 48.82117%;
         margin: 1em 0;
         text-align: right; }
         .page-content .post .share:last-child {
@@ -509,7 +501,7 @@ pre code.hljs {
   .page-content .post .disqus {
     float: left;
     display: block;
-    margin-right: 2.3576515979%;
+    margin-right: 2.35765%;
     width: 100%; }
     .page-content .post .disqus:last-child {
       margin-right: 0; }
@@ -517,7 +509,7 @@ pre code.hljs {
     padding: 0.5em 1em 1em 1em;
     text-align: center; }
   .page-content .page .posts-list li {
-    padding: 0.4822530864em;
+    padding: 0.48225em;
     padding-left: 0; }
   .page-content .page .posts-list .desc {
     font-size: 0.9em; }
@@ -533,7 +525,7 @@ pre code.hljs {
 */
 .site-footer {
   padding: 1em 1em 2em 1em;
-  background-color: #056571;
+  background-color: #568856;
   color: #fff;
   /*
   *	Site Navigation (left)
@@ -561,7 +553,7 @@ pre code.hljs {
   .site-footer .site-navigation {
     float: left;
     display: block;
-    margin-right: 2.3576515979%;
+    margin-right: 2.35765%;
     width: 100%;
     font-size: 0.9em; }
     .site-footer .site-navigation:last-child {
@@ -570,23 +562,23 @@ pre code.hljs {
       .site-footer .site-navigation {
         float: left;
         display: block;
-        margin-right: 2.3576515979%;
-        width: 48.821174201%; }
+        margin-right: 2.35765%;
+        width: 48.82117%; }
         .site-footer .site-navigation:last-child {
           margin-right: 0; } }
     @media screen and (min-width: 768px) {
       .site-footer .site-navigation {
         float: left;
         display: block;
-        margin-right: 2.3576515979%;
-        width: 31.7615656014%; }
+        margin-right: 2.35765%;
+        width: 31.76157%; }
         .site-footer .site-navigation:last-child {
           margin-right: 0; } }
   .site-footer .site-contact {
     margin-top: 1em;
     float: left;
     display: block;
-    margin-right: 2.3576515979%;
+    margin-right: 2.35765%;
     width: 100%;
     font-size: 0.9em; }
     .site-footer .site-contact:last-child {
@@ -595,8 +587,8 @@ pre code.hljs {
       .site-footer .site-contact {
         float: left;
         display: block;
-        margin-right: 2.3576515979%;
-        width: 48.821174201%;
+        margin-right: 2.35765%;
+        width: 48.82117%;
         margin-top: 0;
         margin-right: 0; }
         .site-footer .site-contact:last-child {
@@ -605,8 +597,8 @@ pre code.hljs {
       .site-footer .site-contact {
         float: left;
         display: block;
-        margin-right: 2.3576515979%;
-        width: 31.7615656014%;
+        margin-right: 2.35765%;
+        width: 31.76157%;
         margin-top: 0; }
         .site-footer .site-contact:last-child {
           margin-right: 0; } }
@@ -617,7 +609,7 @@ pre code.hljs {
     margin-top: 1em;
     float: left;
     display: block;
-    margin-right: 2.3576515979%;
+    margin-right: 2.35765%;
     width: 100%;
     font-size: 0.9em; }
     .site-footer .site-signature:last-child {
@@ -626,8 +618,8 @@ pre code.hljs {
       .site-footer .site-signature {
         float: left;
         display: block;
-        margin-right: 2.3576515979%;
-        width: 31.7615656014%;
+        margin-right: 2.35765%;
+        width: 31.76157%;
         margin-right: 0;
         margin-top: 0; }
         .site-footer .site-signature:last-child {

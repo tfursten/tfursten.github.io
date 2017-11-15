@@ -3,11 +3,11 @@ layout: post
 title:  "Python Virtual Environments"
 date:   2015-04-26 08:43:59
 author: Tara Furstenau
-categories: Tutorials
+categories: Programming
 tags:	python
 cover:  "assets/instacode.png"
 ---
-Python projects often require a specific package version that may be different than the global package. Virtual environments are helpful in this scenario because they create an isolated Python environment within a directory with its own set of packages. Different environments can be created for specific projects and the dependent modules can easily be listed in a requirements.txt file for project release.
+Often times a Python project will require a specific package version that is different than the global package. Virtual environments are helpful in this scenario because they create an isolated Python environment within a directory with its own set of packages.  If virtualenv is installed, this will allow a user to install packages using pip without requiring root access.
 
 To install virtualenv:
 
