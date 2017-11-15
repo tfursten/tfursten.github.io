@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <title>Self-incompatibility Systems and Inbreeding</title>
+  <meta name="description" content="Inbreeding in hermaphroditic plants can occur through two different mechanisms: biparental inbreeding, when a plant mates with a related individual, or self-...">
+  
+  <meta name="author" content="Tara Furstenau">
+  <meta name="copyright" content="&copy; Tara Furstenau 2017">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+ 
+
+	<!-- Facebook OGP cards -->
+  <meta property="og:description" content="Inbreeding in hermaphroditic plants can occur through two different mechanisms: biparental inbreeding, when a plant mates with a related individual, or self-..." />
+  <meta property="og:url" content="http://localhost:4000" />
+  <meta property="og:site_name" content="Tara Furstenau, Ph.D." />
+  <meta property="og:title" content="Self-incompatibility Systems and Inbreeding" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Self-incompatibility Systems and Inbreeding">
+  <meta name="twitter:description" content="Inbreeding in hermaphroditic plants can occur through two different mechanisms: biparental inbreeding, when a plant mates with a related individual, or self-...">
+  <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
+  <meta name="twitter:url" content="http://localhost:4000">
+
+  
+
+	<!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000//research/2017/11/02/SI.html">
+  <link rel="alternate" type="application/rss+xml" title="Tara Furstenau, Ph.D." href="http://localhost:4000//feed.xml" />
+  <!-- Bootstrap -->
+
+
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      <i class="fa fa-home  fa-2x" style="color:white; line-height: 2.0;"></i>
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+    	<i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+      	
+          
+          <li class="nav-link"><a href="/CV/">CV</a>
+          
+        
+          
+          <li class="nav-link"><a href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/posts/">Posts</a>
+          
+        
+          
+        
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container has-cover" style="background-image: url(/assets/header_image.jpg);">
+	<div class="scrim has-cover">
+		<header class="post-header">
+		  <h1 class="title">Self-incompatibility Systems and Inbreeding</h1>
+		  <p class="info">by <strong>Tara Furstenau, Ph.D.</strong></p>
+		</header>
+	</div>
+</div>
+
+<div class="wrapper">
+
+
+
+<section class="post-meta">
+	<div class="post-date">November 2, 2017</div>
+	<div class="post-categories">
+	in 
+	  
+	  <span>Research</span>
+	  
+	
+	</div>
+</section>	
+
+<article class="post-content">
+  <h1 id="the-impact-of-self-incompatibility-systems-on-the-prevention-of-biparental-inbreeding">The impact of self-incompatibility systems on the prevention of biparental inbreeding</h1>
+<p>Tara N. Furstenau and Reed A. Cartwright</p>
+
+<h2 id="abstract">Abstract</h2>
+<p>Inbreeding in hermaphroditic plants can occur through two different mechanisms: biparental inbreeding, when a plant mates with a related individual, or self-fertilization, when a plant mates with itself. To avoid inbreeding, many hermaphroditic plants have evolved self-incompatibility (SI) systems which prevent or limit self-fertilization. One particular SI system — homomorphic SI — can also reduce biparental inbreeding. Homomorphic SI is found in many angiosperm species, and it is often assumed that the additional benefit of reduced biparental inbreeding may be a factor in the success of this SI system. To test this assumption, we developed a spatially-explicit, individual-based simulation of plant populations that displayed three different types of homomorphic SI. We measured the total level of inbreeding avoidance by comparing each population to a self-compatible population (NSI), and we measured biparental inbreeding avoidance by comparing to a population of self-incompatible plants that were free to mate with any other individual (PSI). Because biparental inbreeding is more common when offspring dispersal is limited, we examined the levels of biparental inbreeding over a range of dispersal distances. We also tested whether the introduction of inbreeding depression affected the level of biparental inbreeding avoidance. We found that there was a statistically significant decrease in autozygosity in each of the homomorphic SI populations compared to the PSI population and, as expected, this was more pronounced when seed and pollen dispersal was limited. However, levels of homozygosity and inbreeding depression were not reduced. At low dispersal, homomorphic SI populations also suffered reduced female fecundity and had smaller census population sizes. Overall, our simulations showed that the homomorphic SI systems had little impact on the amount of biparental inbreeding in the population especially when compared to the overall reduction in inbreeding compared to the NSI population. With further study, this observation may have important consequences for research into the origin and evolution of homomorphic self-incompatibility systems.</p>
+
+<p><a href="https://peerj.com/manuscripts/18869/">PeerJ Preprint</a><br />
+<a href="https://github.com/tfursten/SI-cpp">Github</a></p>
+
+</article>
+
+
+
+<section class="rss">
+	<p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+      <a href="http://twitter.com/share?text=Self-incompatibility+Systems+and+Inbreeding&amp;url=http://localhost:4000/research/2017/11/02/SI.html"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+      	<i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+  
+    
+      <a href="//www.facebook.com/sharer.php?t=Self-incompatibility+Systems+and+Inbreeding&amp;u=http://localhost:4000/research/2017/11/02/SI.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+      	<i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+  
+    
+  
+    
+      <a href="//www.linkedin.com/shareArticle?mini=trueSelf-incompatibility+Systems+and+Inbreeding&amp;url=http://localhost:4000/research/2017/11/02/SI.html"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
+      	<i class="fa fa-linkedin-square fa-lg"></i>
+      </a>
+    
+  
+    
+      <a href="//plus.google.com/share?title=Self-incompatibility+Systems+and+Inbreeding&amp;url=http://localhost:4000/research/2017/11/02/SI.html"
+        onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+      	<i class="fa fa-google-plus-square fa-lg"></i>
+      </a>
+    
+  
+</section>
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'tfursten';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Tara Furstenau, Ph.D.</h3>
+
+    <div class="site-navigation">
+
+    	<p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="/CV/">CV</a>
+        
+        
+        
+          <li class="nav-link"><a href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="/posts/">Posts</a>
+        
+        
+        
+        
+        
+        
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+    	<p><strong>Contact</strong>
+      <ul class="social-media-list">
+      	<li>
+      		<a href="mailto:tarafurstenau@gmail.com">
+	      		<i class="fa fa-envelope-o"></i>
+	      		<span class="username">tarafurstenau@gmail.com</span>
+      		</a>
+      	</li>
+
+      	
+      	
+      	<li>
+          <a href="https://twitter.com/tara_furstenau" title="Follow me on Twitter">
+            <i class="fa fa-twitter"></i>
+            <span class="username">@tara_furstenau</span>
+          </a>
+        </li>
+      	
+      	
+      	
+      	<li>
+          <a href="https://www.facebook.com/tara.furstenau" title="Friend me on Facebook">
+            <i class="fa fa-facebook"></i>
+            <span class="username">TaraFurstenau</span>
+          </a>
+        </li>
+      	
+      	
+      	
+      	<li>
+          <a href="https://github.com/tfursten" title="Fork me on GitHub">
+            <i class="fa fa-github"></i>
+            <span class="username">tfursten</span>
+          </a>
+        </li>
+      	
+      	
+      	
+      	<li>
+          <a href="http://www.linkedin.com/pub/tara-furstenau/74/b3/491" title="Connect with me on LinkedIn">
+            <i class="fa fa-linkedin"></i>
+            <span class="username">TaraFurstenau</span>
+          </a>
+        </li>
+      	
+      	
+      	
+      	<li>
+          <a href="https://plus.google.com/u/1/+TaraFurstenau/about" title="Add me to your Circles">
+            <i class="fa fa-google-plus"></i>
+            <span class="username">TaraFurstenau</span>
+          </a>
+        </li>
+      	
+      	
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+    	<p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text"></p>
+    </div>
+  <p>&copy;&nbsp;Tara Furstenau</p>
+  <p><small>Powered by <a href="http://jekyllrb.com" target="_blank"><em>Jekyll</em></a> using <a href="http://bencentra.github.io/centrarium/" target="_blank"><em>Centrarium</em></a> theme and hosted with <a href="http://github.com" target="_blank"><em>GitHub</em></a></small></p>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+
+<script>
+
+$(document).ready(function() {
+
+	// Syntax highlighting
+	hljs.initHighlightingOnLoad();
+
+	// Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+
+});
+
+</script>
+
+
+
+
+  </body>
+
+</html>
