@@ -1,7 +1,11 @@
 <header class="navigation" role="banner">
   <div class="navigation-wrapper">
     <a href="{{ site.baseurl }}" class="logo">
-      <i class="fa fa-home  fa-2x" style="color:white; line-height: 2.0;"></i>
+    	{% if site.logo %}
+      <img src="{{ site.logo | prepend: site.baseurl }}" alt="{{ site.title }}">
+      {% else %}
+      <span>{{ site.title }}</span>
+      {% endif %}
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
     	<i class="fa fa-bars"></i>
