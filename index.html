@@ -8,9 +8,8 @@ layout: default
 		<header class="site-header">
 		  <h1 class="title">{{ site.title }}</h1>
 		  {% if site.subtitle %}<p class="subtitle">{{ site.subtitle }}</p>{% endif %}
-		</header>		
+		</header>
 	</div>
-	<font size="1pt">Copyright: <a href='https://www.123rf.com/profile_ktsdesign'>ktsdesign / 123RF Stock Photo</a></font>
 </div>
 
 <div class="wrapper">
@@ -21,7 +20,7 @@ layout: default
       <a class="post-link" href="{{ post.url | remove_first: '/' | prepend: site.baseurl }}">{{ post.title }}</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+      <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
     </section>
     <section class="post-meta">
     	<div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
