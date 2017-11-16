@@ -68,7 +68,7 @@ layout: default
     {% endif %}
     <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
 		{% if paginator.next_page %}
-    <a class="newer-posts" href="{{ site.baseurl }}page{{paginator.next_page}}" style="text-decoration:none !important;">
+    <a class="newer-posts" href="{{ "/" | absolute_url }}page{{paginator.next_page}}" style="text-decoration:none !important;">
 	    <span class="fa-stack fa-lg">
 			  <i class="fa fa-square fa-stack-2x"></i>
 			  <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
@@ -82,7 +82,7 @@ layout: default
     {% endif %}
 	</p>
   <p>
-    <a href="{{ site.baseurl }}posts">View All Posts by Category</a>
+    <a href="{{ "/" | absolute_url }}posts">View All Posts by Category</a>
   </p>
 </nav>
 
