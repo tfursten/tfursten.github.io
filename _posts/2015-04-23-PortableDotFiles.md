@@ -3,11 +3,11 @@ layout: post
 title:  "Portable Dotfiles Using Git & Github"
 date:   2015-04-23
 author: Tara Furstenau
-categories: Programming
+categories: Tutorials
 tags:	dot files
 cover:  "assets/instacode.png"
 ---
-This set of notes covers how to effectively manage custom dotfiles so they may easily be transferred between different machines. The notes include a script from [Using Git and Github to Manage your Dotfiles](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/) by MICHAEL SMALLEY. Once the dotfiles repository is cloned into the home directory, this script will create symbolic links to the custom configuration files.  It will also move any existing dotfiles that match those in the cloned directory into a dotfiles_old directory.  
+Effectively manage custom dotfiles so they are easily transferrable between different machines. The notes include a script from [Using Git and Github to Manage your Dotfiles](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/) by MICHAEL SMALLEY. Once the dotfiles repository is cloned into the home directory, this script will create symbolic links to the custom configuration files.  It will also move any existing dotfiles that match those in the cloned directory into a dotfiles_old directory.  
 
 ### Organize dotfiles in new directory
 In the home directory create a new directory for the dotfiles  

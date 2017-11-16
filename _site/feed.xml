@@ -1,168 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tara Furstenau</title>
+    <title>Tara Furstenau, Ph.D.</title>
     <description></description>
-    <link>http://tfursten.github.io//</link>
-    <atom:link href="http://tfursten.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 15 Oct 2015 10:50:34 -0700</pubDate>
-    <lastBuildDate>Thu, 15 Oct 2015 10:50:34 -0700</lastBuildDate>
-    <generator>Jekyll v2.4.0</generator>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 15 Nov 2017 16:29:48 -0700</pubDate>
+    <lastBuildDate>Wed, 15 Nov 2017 16:29:48 -0700</lastBuildDate>
+    <generator>Jekyll v3.6.2</generator>
     
       <item>
-        <title>IRkernel</title>
-        <description>&lt;p&gt;This post will cover how to set up an R notebook.  I discussed the benefits of using notebooks in a previous &lt;a href=&quot;/programming/2015/10/04/jupyter.html&quot;&gt;post&lt;/a&gt;. More information can be found &lt;a href=&quot;irkernel.github.io&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+        <title>Self-incompatibility Systems and Inbreeding</title>
+        <description>&lt;h1 id=&quot;the-impact-of-self-incompatibility-systems-on-the-prevention-of-biparental-inbreeding&quot;&gt;The impact of self-incompatibility systems on the prevention of biparental inbreeding&lt;/h1&gt;
+&lt;p&gt;Tara N. Furstenau and Reed A. Cartwright&lt;/p&gt;
 
-&lt;h2 id=&quot;requirements&quot;&gt;Requirements&lt;/h2&gt;
-&lt;p&gt;Jupyter and a current R installation&lt;/p&gt;
+&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Inbreeding in hermaphroditic plants can occur through two different mechanisms: biparental inbreeding, when a plant mates with a related individual, or self-fertilization, when a plant mates with itself. To avoid inbreeding, many hermaphroditic plants have evolved self-incompatibility (SI) systems which prevent or limit self-fertilization. One particular SI system — homomorphic SI — can also reduce biparental inbreeding. Homomorphic SI is found in many angiosperm species, and it is often assumed that the additional benefit of reduced biparental inbreeding may be a factor in the success of this SI system. To test this assumption, we developed a spatially-explicit, individual-based simulation of plant populations that displayed three different types of homomorphic SI. We measured the total level of inbreeding avoidance by comparing each population to a self-compatible population (NSI), and we measured biparental inbreeding avoidance by comparing to a population of self-incompatible plants that were free to mate with any other individual (PSI). Because biparental inbreeding is more common when offspring dispersal is limited, we examined the levels of biparental inbreeding over a range of dispersal distances. We also tested whether the introduction of inbreeding depression affected the level of biparental inbreeding avoidance. We found that there was a statistically significant decrease in autozygosity in each of the homomorphic SI populations compared to the PSI population and, as expected, this was more pronounced when seed and pollen dispersal was limited. However, levels of homozygosity and inbreeding depression were not reduced. At low dispersal, homomorphic SI populations also suffered reduced female fecundity and had smaller census population sizes. Overall, our simulations showed that the homomorphic SI systems had little impact on the amount of biparental inbreeding in the population especially when compared to the overall reduction in inbreeding compared to the NSI population. With further study, this observation may have important consequences for research into the origin and evolution of homomorphic self-incompatibility systems.&lt;/p&gt;
 
-&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
-&lt;p&gt;To install from source for Linux (Ubuntu/Debian) you need zmq development headers.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install libzmq3-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then start R in the same terminal and install the following packages:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;install.packages&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;rzmq&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;repr&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;IRkernel&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;IRdisplay&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-	                 repos &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;http://irkernel.github.io/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;getOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;repos&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;
-	                 type &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;source&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	IRkernel&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;installspec&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;running&quot;&gt;Running&lt;/h2&gt;
-&lt;p&gt;Open a Jupyter notebook from the command line
-	jupyter notebook
-Then click the &lt;code&gt;New&lt;/code&gt; dropdown and select a new R Notebook&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&quot;https://peerj.com/manuscripts/18869/&quot;&gt;PeerJ Preprint&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/tfursten/SI-cpp&quot;&gt;Github&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Mon, 05 Oct 2015 00:00:00 -0700</pubDate>
-        <link>http://tfursten.github.io//programming/2015/10/05/IRkernel.html</link>
-        <guid isPermaLink="true">http://tfursten.github.io//programming/2015/10/05/IRkernel.html</guid>
+        <pubDate>Thu, 02 Nov 2017 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000//research/2017/11/02/SI.html</link>
+        <guid isPermaLink="true">http://localhost:4000//research/2017/11/02/SI.html</guid>
         
-        <category>R</category>
+        <category>isolation-by-distance</category>
         
-        <category>Notebook</category>
+        <category>self-incompatibility</category>
+        
+        <category>simulation</category>
         
         
-        <category>programming</category>
+        <category>Research</category>
         
       </item>
     
       <item>
         <title>Jupyter Tricks</title>
-        <description>&lt;p&gt;Jupyter Notebook, previously known as iPython Notebook, is a web based application for interactive computing. Kernels have been developed for many popular programming languages including Julia, Python and R which have been clevarly combined to form the new name Jupyter.  These notebooks are a great way to record any data analysis work flow and are therefore great for reproducibility.  Notebooks also allow you to keep all of your code in one place instead of having a directory full of random scripts and output.  The integration of Markdown cells makes documentation clean and simple so notebooks are a great way to share results with colleagues.  In this post I will be collecting helpful usage tips as I find them. &lt;/p&gt;
+        <description>&lt;p&gt;Jupyter Notebook, previously known as iPython Notebook, is a web based application for interactive computing. Kernels have been developed for many popular programming languages including Julia, Python and R which have been cleverly combined to form the new name Jupyter.  These notebooks are a great way to record any data analysis work flow and are therefore great for reproducibility.  Notebooks also allow you to keep all of your code in one place instead of having a directory full of random scripts and output.  The integration of Markdown cells makes documentation clean and simple so notebooks are a great way to share results with colleagues.  In this post I will be collecting helpful usage tips as I find them.&lt;/p&gt;
 
 &lt;h2 id=&quot;make-an-alias-to-run-the-notebook&quot;&gt;Make an Alias to Run the Notebook&lt;/h2&gt;
-&lt;p&gt;The usual command &lt;code&gt;jupyter notebook&lt;/code&gt; quickly became tedious so this is a good candidate for an alias.&lt;/p&gt;
+&lt;p&gt;Typing the command &lt;code class=&quot;highlighter-rouge&quot;&gt;jupyter notebook&lt;/code&gt; quickly becomes tedious so this is a good candidate for an alias.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;alias nb=&quot;jupyter notebook&quot;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alias nb=&quot;jupyter notebook&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;using-shell-commands&quot;&gt;Using Shell Commands&lt;/h2&gt;
-&lt;p&gt;In my opinion, the ability to use shell commands inside the notebook is the best part.  Using these tools allows you to record and reproduce all of the analysis steps exactly.  &lt;/p&gt;
+&lt;p&gt;In my opinion, the ability to use shell commands inside the notebook is the best part of using notebooks.  Using these tools allows you to record and reproduce all of the analysis steps exactly.&lt;/p&gt;
 
-&lt;p&gt;You can run any shell command within the notebook by using the &lt;code&gt;!&lt;/code&gt; prefix.&lt;/p&gt;
+&lt;p&gt;You can run any shell command within the notebook by using the &lt;code class=&quot;highlighter-rouge&quot;&gt;!&lt;/code&gt; prefix.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;In[1]: !ls
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In[1]: !ls
 Out[1]: file1.txt file2.txt file3.txt
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The output of the command can be stored as a list&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;In[2]: filenames = !ls
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In[2]: filenames = !ls
 In[3]: filenames
-Out[3]: [&#39;file1.txt&#39;, &#39;file2.txt&#39;, &#39;file3.txt&#39;]
-&lt;/code&gt;&lt;/pre&gt;
+Out[3]: ['file1.txt', 'file2.txt', 'file3.txt']
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;magics&quot;&gt;Magics&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;%load&lt;/code&gt;&lt;br /&gt;
-This magic loads a Python file from a filepath or URL and replaces the contents of the cell with the contents of the file.&lt;br /&gt;
-&lt;code&gt;%matplotlib inline&lt;/code&gt;&lt;br /&gt;
-This magic places matplotlib plots inline instead of opening a new window.&lt;br /&gt;
-&lt;code&gt;%%writefile&lt;/code&gt;&lt;br /&gt;
-This magic writes the contents of a cell to a file.&lt;br /&gt;
-&lt;code&gt;%pprint&lt;/code&gt;&lt;br /&gt;
-This magic toggles pretty print on/off&lt;br /&gt;
-&lt;code&gt;%reset&lt;/code&gt;&lt;br /&gt;
-This magic resets the namespace by removing all names defined by the user, if called without arguments.&lt;br /&gt;
-&lt;code&gt;%timeit&lt;/code&gt;&lt;br /&gt;
-This magic times the execution of a Python statement or expression. The CPU and clock times are printed.&lt;br /&gt;
-&lt;code&gt;%%html&lt;/code&gt;&lt;br /&gt;
-Render the cell as a block of HTML&lt;br /&gt;
-&lt;code&gt;%%latex&lt;/code&gt;&lt;br /&gt;
-Render the cell as a block of latex  &lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;%load&lt;/code&gt;&lt;br /&gt;
+This magic loads a Python file from a filepath or URL and replaces the contents of the cell with the contents of the file.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;%matplotlib inline&lt;/code&gt;&lt;br /&gt;
+This magic places matplotlib plots inline instead of opening a new window.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;%%writefile&lt;/code&gt;&lt;br /&gt;
+This magic writes the contents of a cell to a file.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;%pprint&lt;/code&gt;&lt;br /&gt;
+This magic toggles pretty print on/off
+&lt;code class=&quot;highlighter-rouge&quot;&gt;%reset&lt;/code&gt;&lt;br /&gt;
+This magic resets the namespace by removing all names defined by the user, if called without arguments.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;%timeit&lt;/code&gt;&lt;br /&gt;
+This magic times the execution of a Python statement or expression. The CPU and clock times are printed.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;%%html&lt;/code&gt;&lt;br /&gt;
+Render the cell as a block of HTML
+&lt;code class=&quot;highlighter-rouge&quot;&gt;%%latex&lt;/code&gt;&lt;br /&gt;
+Render the cell as a block of latex&lt;/p&gt;
 
 &lt;h2 id=&quot;adding-line-numbers&quot;&gt;Adding Line Numbers&lt;/h2&gt;
-&lt;p&gt;One of the most annoying things about the Jupyter Notebook is the lack of line numbers.  Error messages are not very useful when you can’t refer to line numbers. &lt;/p&gt;
+&lt;p&gt;One of the most annoying things about the Jupyter Notebook is the lack of line numbers. This makes it very difficult to track down lines mentioned in error messages.&lt;/p&gt;
 
-&lt;p&gt;Typing &lt;code&gt;CTRL-M L&lt;/code&gt; toggles line numbers in the focus cell. &lt;/p&gt;
+&lt;p&gt;Typing &lt;code class=&quot;highlighter-rouge&quot;&gt;CTRL-M L&lt;/code&gt; toggles line numbers in the focus cell.&lt;/p&gt;
 
-&lt;p&gt;To make line numbers default you must edit the &lt;code&gt;~/.ipython/profile_default/static/custom/custom.js&lt;/code&gt; file by adding these lines:&lt;/p&gt;
+&lt;p&gt;To make line numbers default you must edit the &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.ipython/profile_default/static/custom/custom.js&lt;/code&gt; file by adding these lines:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;define([
-    &#39;base/js/namespace&#39;,
-    &#39;base/js/events&#39;
-    ], 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;define([
+    'base/js/namespace',
+    'base/js/events'
+    ],
     function(IPython, events) {
-        events.on(&quot;app_initialized.NotebookApp&quot;, 
+        events.on(&quot;app_initialized.NotebookApp&quot;,
             function () {
                 IPython.Cell.options_default.cm_config.lineNumbers = true;
             }
         );
     }
-);	
-&lt;/code&gt;&lt;/pre&gt;
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;From &lt;a href=&quot;http://stackoverflow.com/questions/20197471/how-to-display-line-numbers-in-ipython-notebook-code-cell-by-default&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;keyboard-shortcuts&quot;&gt;Keyboard Shortcuts&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Shift-Enter&lt;/code&gt; Run current cell and move to the cell below&lt;br /&gt;
-&lt;code&gt;Ctrl-Enter&lt;/code&gt; Run current cell and stay in that cell&lt;br /&gt;
-&lt;code&gt;Alt-Enter&lt;/code&gt; Run the current cell then create and move to a new cell below.&lt;/p&gt;
-
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Shift-Enter&lt;/code&gt; Run current cell and move to the cell below&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl-Enter&lt;/code&gt; Run current cell and stay in that cell&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Alt-Enter&lt;/code&gt; Run the current cell then create and move to a new cell below.&lt;/p&gt;
 </description>
         <pubDate>Sun, 04 Oct 2015 10:43:59 -0700</pubDate>
-        <link>http://tfursten.github.io//programming/2015/10/04/jupyter.html</link>
-        <guid isPermaLink="true">http://tfursten.github.io//programming/2015/10/04/jupyter.html</guid>
+        <link>http://localhost:4000//tutorials/2015/10/04/jupyter.html</link>
+        <guid isPermaLink="true">http://localhost:4000//tutorials/2015/10/04/jupyter.html</guid>
         
         <category>Jupyter</category>
         
         <category>iPython</category>
         
         
-        <category>programming</category>
+        <category>Tutorials</category>
         
       </item>
     
       <item>
         <title>Dispersal Kernels and Isolation-by-Distance</title>
         <description>&lt;h1 id=&quot;the-effect-of-the-dispersal-kernel-on-isolation-by-distance-in-a-continuous-population&quot;&gt;The effect of the dispersal kernel on isolation-by-distance in a continuous population&lt;/h1&gt;
-&lt;p&gt;Tara N. Furstenau and Reed A. Cartwright  &lt;/p&gt;
+&lt;p&gt;Tara N. Furstenau and Reed A. Cartwright&lt;/p&gt;
 
 &lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;/h2&gt;
-&lt;p&gt;Under models of isolation-by-distance, population structure is determined by the probability of identity-by-descent between pairs of genes according to the geographic distance between them. Well established analytical results indicate that the relationship between geographical and genetic distance depends mostly on the neighborhood size of the population, &lt;script type=&quot;math/tex&quot;&gt;N_b=4\pi\sigma2D_e&lt;/script&gt;, which represents a standardized measure of dispersal. To test this prediction, we model local dispersal of haploid individuals on a two-dimensional torus using four dispersal kernels: Rayleigh, exponential, half-normal and triangular. When neighborhood size is held constant, the distributions produce similar patterns of isolation-by-distance, confirming predictions. Considering this, we propose that the triangular distribution is the appropriate null distribution for isolation-by-distance studies. Under the triangular distribution, dispersal is uniform within an area of 4πσ2 (i.e. the neighborhood area), which suggests that the common description of neighborhood size as a measure of a local panmictic population is valid for popular families of dispersal distributions. We further show how to draw from the triangular distribution efficiently and argue that it should be utilized in other studies in which computational efficiency is important&lt;br /&gt;
+
+&lt;p&gt;Under models of isolation-by-distance, population structure is determined by the probability of identity-by-descent between pairs of genes according to the geographic distance between them. Well established analytical results indicate that the relationship between geographical and genetic distance depends mostly on the neighborhood size of the population, &lt;script type=&quot;math/tex&quot;&gt;N_b=4\pi\sigma^2D_e&lt;/script&gt;, which represents a standardized measure of dispersal. To test this prediction, we model local dispersal of haploid individuals on a two-dimensional torus using four dispersal kernels: Rayleigh, exponential, half-normal and triangular. When neighborhood size is held constant, the distributions produce similar patterns of isolation-by-distance, confirming predictions. Considering this, we propose that the triangular distribution is the appropriate null distribution for isolation-by-distance studies. Under the triangular distribution, dispersal is uniform within an area of 4πσ2 (i.e. the neighborhood area), which suggests that the common description of neighborhood size as a measure of a local panmictic population is valid for popular families of dispersal distributions. We further show how to draw from the triangular distribution efficiently and argue that it should be utilized in other studies in which computational efficiency is important&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://peerj.com/articles/1848/&quot;&gt;PeerJ&lt;/a&gt; (Peer Reviewed Article)&lt;br /&gt;
 &lt;a href=&quot;http://arxiv.org/pdf/1501.01085v1.pdf&quot;&gt;arXiv&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://github.com/tfursten/IBD&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;evolution-2014-poster&quot;&gt;Evolution 2014 Poster&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://localhost:4000/assets/IBD.pdf&quot;&gt;&lt;img src=&quot;/assets/IBD.png&quot; alt=&quot;Poster&quot; style=&quot;width: 300px;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;simulation-description&quot;&gt;Simulation Description&lt;/h2&gt;
-&lt;p&gt;In the simulation, a population exists on a &lt;script type=&quot;math/tex&quot;&gt;N \times N&lt;/script&gt; rectangular lattice with either periodic boundaries (a torus) or absorbing boundaries. Individuals are uniformly distributed on the lattice with a single individual per node. Individuals are haploid and contain a single neutral genetic locus.&lt;/p&gt;
+&lt;p&gt;In the simulation, a population exists on a &lt;script type=&quot;math/tex&quot;&gt;N \times N&lt;/script&gt; rectangular lattice with either periodic boundaries (a torus) or absorbing boundaries. Individuals are uniformly distributed on the lattice with a single individual per node. Individuals are haploid and contain a single, selectively neutral genetic locus.&lt;/p&gt;
 
-&lt;p&gt;In the initial generation, the population contains the maximum number of individuals allowed by the landscape and each individual is assigned a unique allele (represented by an integer). During each discrete generation cycle, individuals reproduce by producing a number of clonal offspring.  These offspring experience mutations according to the infinite alleles model at rate &lt;script type=&quot;math/tex&quot;&gt;\mu&lt;/script&gt;.  A burn-in period may be set to allow the population to reach a drift/mutation equilibrium. &lt;/p&gt;
+&lt;p&gt;In the initial generation, the population contains the maximum number of individuals allowed by the landscape and each individual is assigned a unique allele (represented by an integer). During each discrete generation cycle, individuals reproduce by producing a number of clonal offspring.  These offspring experience mutations according to the infinite alleles model at rate &lt;script type=&quot;math/tex&quot;&gt;\mu&lt;/script&gt;.  A burn-in period may be set to allow the population to reach a drift/mutation equilibrium.&lt;/p&gt;
 
-&lt;p&gt;The offspring disperse from their original cell according to a set dispersal distribution.  As offspring land on their destination cell they are immediately accepted or rejected using a reservoir sampling method, which allows the offspring to be uniformly sampled at each location as they arrive instead of storing them all in memory &lt;a href=&quot;http://www.cs.umd.edu/~samir/498/vitter.pdf&quot;&gt;(Vitter, 1985)&lt;/a&gt;.  When dispersal is complete, there is a maximum of one offspring per cell and that offspring becomes a parent in the next generation. &lt;/p&gt;
+&lt;p&gt;The offspring disperse from their original cell according to a set dispersal distribution.  As offspring land on their destination cell they are immediately accepted or rejected using a reservoir sampling method, which allows the offspring to be uniformly sampled at each location as they arrive instead of storing them all in memory &lt;a href=&quot;http://www.cs.umd.edu/~samir/498/vitter.pdf&quot;&gt;(Vitter, 1985)&lt;/a&gt;.  When dispersal is complete, there is a maximum of one offspring per cell and that offspring becomes a parent in the next generation.&lt;/p&gt;
 
-&lt;p&gt;There are currently 9 different dispersal distributions: exponential, gamma, half-normal, Pareto, Rayleigh, Rice, ring, and uniform. Some distributions have two implementations where one version is faster than the other.  The faster version is used by setting the &lt;code&gt;--fast&lt;/code&gt; flag to true which is default. All uniform pseudo-random numbers are generated using an efficient xorshift algorithm &lt;a href=&quot;http://www.jstatsoft.org/v08/i14/&quot;&gt;(Marsaglia 2003)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;There are currently 9 different dispersal distributions: exponential, gamma, half-normal, Pareto, Rayleigh, Rice, ring, and uniform. Some distributions have two implementations where one version is faster than the other.  The faster version is used by setting the &lt;code class=&quot;highlighter-rouge&quot;&gt;--fast&lt;/code&gt; flag to true which is default. All uniform pseudo-random numbers are generated using an efficient xorshift algorithm &lt;a href=&quot;http://www.jstatsoft.org/v08/i14/&quot;&gt;(Marsaglia 2003)&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;exponential&quot;&gt;Exponential&lt;/h3&gt;
 &lt;p&gt;The &lt;a href=&quot;http://en.wikipedia.org/wiki/Exponential_distribution&quot;&gt;exponential&lt;/a&gt; dispersal function takes a single argument (&lt;script type=&quot;math/tex&quot;&gt;\sigma&lt;/script&gt;) and returns polar coordinates with exponentially distributed distances with rate &lt;script type=&quot;math/tex&quot;&gt;\frac{1}{\sigma}&lt;/script&gt; and a uniform angle.  The distance values are drawn using an implementation of the ziggurat rejection sampling algorithm for the exponential distribution &lt;a href=&quot;http://www.jstatsoft.org/v05/i08/paper/&quot;&gt;(Marsaglia and Tsang, 2000)&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;gamma&quot;&gt;Gamma&lt;/h3&gt;
-&lt;p&gt;The &lt;a href=&quot;http://en.wikipedia.org/wiki/Gamma_distribution&quot;&gt;gamma&lt;/a&gt; dispersal function takes two arguments, &lt;script type=&quot;math/tex&quot;&gt;\sigma&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt;, and the &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; parameter is calculated so that the second moment of the distribution is equal to &lt;script type=&quot;math/tex&quot;&gt;2\sigma^2&lt;/script&gt;. This function returns polar coordinates with gamma distributed distances and a uniform angle. The distance values are generated using &lt;a href=&quot;http://dl.acm.org/citation.cfm?id=358414&quot;&gt;Marsaglia’s (2000)&lt;/a&gt; rejection sampling algorithm which takes advantage of the fast ziggurat procedure for generating normally distributed PRNs &lt;a href=&quot;http://www.jstatsoft.org/v05/i08/paper/&quot;&gt;(Marsaglia and Tsang, 2000)&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;http://en.wikipedia.org/wiki/Gamma_distribution&quot;&gt;gamma&lt;/a&gt; dispersal function takes two arguments, &lt;script type=&quot;math/tex&quot;&gt;\sigma&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt;, and the &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; parameter is calculated so that the second moment of the distribution is equal to &lt;script type=&quot;math/tex&quot;&gt;2\sigma^2&lt;/script&gt;. This function returns polar coordinates with gamma distributed distances and a uniform angle. The distance values are generated using &lt;a href=&quot;http://dl.acm.org/citation.cfm?id=358414&quot;&gt;Marsaglia’s (2000)&lt;/a&gt; rejection sampling algorithm which takes advantage of the fast ziggurat procedure for generating normally distributed PRNs &lt;a href=&quot;http://www.jstatsoft.org/v05/i08/paper/&quot;&gt;(Marsaglia and Tsang, 2000)&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;half-normal&quot;&gt;Half-Normal&lt;/h3&gt;
 &lt;p&gt;The &lt;a href=&quot;http://en.wikipedia.org/wiki/Half-normal_distribution&quot;&gt;half-normal&lt;/a&gt; dispersal function takes a single argument, &lt;script type=&quot;math/tex&quot;&gt;\sigma&lt;/script&gt;, and returns polar coordinates with half-normal distributed distances with variance parameter &lt;script type=&quot;math/tex&quot;&gt;\sigma\sqrt{2}&lt;/script&gt; and a uniform angle. The distance values are the absolute value of draws from a normal distribution using an implementation of the ziggurat rejection sampling algorithm &lt;a href=&quot;http://www.jstatsoft.org/v05/i08/paper/&quot;&gt;(Marsaglia and Tsang, 2000)&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;pareto&quot;&gt;Pareto&lt;/h3&gt;
-&lt;p&gt;The &lt;a href=&quot;http://en.wikipedia.org/wiki/Pareto_distribution&quot;&gt;Pareto&lt;/a&gt; distribution is a mixture of exponential distributions with a gamma mixing distribution. The Pareto dispersal function takes two arguments, &lt;script type=&quot;math/tex&quot;&gt;\sigma&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; and the &lt;script type=&quot;math/tex&quot;&gt;X_{min}&lt;/script&gt; parameter is calculated so that the second moment of the distribution is equal to &lt;script type=&quot;math/tex&quot;&gt;2\sigma^2&lt;/script&gt;. The function returns polar coordinates with Pareto distributed distances and a uniform angle. The distance values are generated using inverse transform sampling, which, due to the relationship between the Pareto and exponential distributions, takes advantage of the fast ziggurat procedure for generating exponentially distributed PRNs &lt;a href=&quot;http://www.jstatsoft.org/v05/i08/paper/&quot;&gt;(Marsaglia and Tsang, 2000)&lt;/a&gt;.  &lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;http://en.wikipedia.org/wiki/Pareto_distribution&quot;&gt;Pareto&lt;/a&gt; distribution is a mixture of exponential distributions with a gamma mixing distribution. The Pareto dispersal function takes two arguments, &lt;script type=&quot;math/tex&quot;&gt;\sigma&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; and the &lt;script type=&quot;math/tex&quot;&gt;X_{min}&lt;/script&gt; parameter is calculated so that the second moment of the distribution is equal to &lt;script type=&quot;math/tex&quot;&gt;2\sigma^2&lt;/script&gt;. The function returns polar coordinates with Pareto distributed distances and a uniform angle. The distance values are generated using inverse transform sampling, which, due to the relationship between the Pareto and exponential distributions, takes advantage of the fast ziggurat procedure for generating exponentially distributed PRNs &lt;a href=&quot;http://www.jstatsoft.org/v05/i08/paper/&quot;&gt;(Marsaglia and Tsang, 2000)&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;lomax&quot;&gt;Lomax&lt;/h3&gt;
 &lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Lomax_distribution&quot;&gt;Lomax&lt;/a&gt; distribution or Pareto Type II distribution is essentially a Pareto distribution that has been shifted so that its support begins at zero.  It takes two arguments, &lt;script type=&quot;math/tex&quot;&gt;\sigma&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; and the scale parameter is calculated so that the second moment of the distribution is equal to &lt;script type=&quot;math/tex&quot;&gt;2\sigma^2&lt;/script&gt;.  The function returns polar coordinates with Lomax  distributed distances and a uniform angle.  The distances are generated by subtracting Xmin from the Pareto dispersal function.&lt;/p&gt;
@@ -180,43 +173,43 @@ Render the cell as a block of latex  &lt;/p&gt;
 &lt;p&gt;The &lt;a href=&quot;http://en.wikipedia.org/wiki/Triangular_distribution&quot;&gt;triangular&lt;/a&gt; dispersal function takes a single argument, &lt;script type=&quot;math/tex&quot;&gt;\sigma&lt;/script&gt;, and returns polar coordinates with triangular distributed distance with &lt;script type=&quot;math/tex&quot;&gt;a=0&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;b=c=2\sigma&lt;/script&gt;, and a uniform angle. The distance values are generated using inverse transform sampling.  There is a fast version of this dispersal function available which precalcuates the probability of dispersing on a discrete lattice.  Once the dispersal probabilities are calculated we use the efficient Alias method to sample from this discrete probability distribution &lt;a href=&quot;http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=92917&quot;&gt;(Vose, 1991)&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;uniform&quot;&gt;Uniform&lt;/h3&gt;
-&lt;p&gt;The uniform dispersal function takes two arguments, the &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt; dimensions of the landscape.  It returns new coordinates anywhere on the landscape with uniform probability.  &lt;/p&gt;
+&lt;p&gt;The uniform dispersal function takes two arguments, the &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt; dimensions of the landscape.  It returns new coordinates anywhere on the landscape with uniform probability.&lt;/p&gt;
 
 &lt;h2 id=&quot;compiling-from-source-code&quot;&gt;Compiling from Source Code&lt;/h2&gt;
-&lt;p&gt;IBD requires &lt;a href=&quot;http://www.cmake.org/&quot;&gt;CMake 2.8&lt;/a&gt; to build from source. &lt;/p&gt;
+&lt;p&gt;IBD requires &lt;a href=&quot;http://www.cmake.org/&quot;&gt;CMake 2.8&lt;/a&gt; to build from source.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Download the source code.  &lt;/li&gt;
-  &lt;li&gt;Decompress the tar-bzip archive&lt;br /&gt;
-  &lt;code&gt;
-  tar xvzf IBD-*.tar.bz2
- &lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Change to the build directory.&lt;br /&gt;
-  &lt;code&gt;
-  cd IBD-*/build
- &lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Run the CMake build system.&lt;br /&gt;
-  &lt;code&gt;
-  cmake ..
- &lt;/code&gt;  &lt;/li&gt;
-  &lt;li&gt;Compile&lt;br /&gt;
-  &lt;code&gt;
-  make
- &lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Download the source code.&lt;/li&gt;
+  &lt;li&gt;Decompress the tar-bzip archive
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  tar xvzf IBD-*.tar.bz2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Change to the build directory.
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  cd IBD-*/build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Run the CMake build system.
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  cmake ..
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Compile
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  make
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;dependencies&quot;&gt;Dependencies&lt;/h2&gt;
 &lt;p&gt;The Boost c++ Library is required for compilation and usage.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Foreach  &lt;/li&gt;
-  &lt;li&gt;Program Options  &lt;/li&gt;
+  &lt;li&gt;Foreach&lt;/li&gt;
+  &lt;li&gt;Program Options&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;run&quot;&gt;Run&lt;/h2&gt;
 &lt;p&gt;Usage:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ ./ibd config.txt
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ./ibd config.txt
 $ ./ibd --help
 Allowed Options:
 
@@ -226,7 +219,7 @@ General Options:
 Configuration:
   -x [ --maxX ] arg (=100)              Set X dimension
   -y [ --maxY ] arg (=100)              Set Y dimension
-  -g [ --generations ] arg (=10)        Set number of Generations to run after 
+  -g [ --generations ] arg (=10)        Set number of Generations to run after
                                         burn-in
   -o [ --offspring ] arg (=10)          Set number of offspring per individual
   -m [ --mut ] arg (=0)                 Set mutation rate
@@ -234,22 +227,21 @@ Configuration:
                                         Set Dispersal Distribution
   -s [ --sigma ] arg (=2)               Set dispersal parameter
   -b [ --burn ] arg (=0)                Set Burn-in Period
-  -t [ --sample ] arg (=1)              Sample every n generations after 
+  -t [ --sample ] arg (=1)              Sample every n generations after
                                         burn-in
   -f [ --output_file ] arg (=data)      Output File Name
   --seed arg (=0)                       Set PRNG seed, 0 to create random seed
-  --landscape arg (=torus)              Set boundary conditions: torus or 
+  --landscape arg (=torus)              Set boundary conditions: torus or
                                         rectangular
   --transect arg (=0)                   Set position of transect in X axis.
   --verbose arg (=0)                    Print data to screen
   --sparam arg (=0)                     Extra Parameter for dispersal
   --fast arg (=1)                       Use fast dispersal when available
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 01 Sep 2015 00:00:00 -0700</pubDate>
-        <link>http://tfursten.github.io//research/2015/09/01/IBD.html</link>
-        <guid isPermaLink="true">http://tfursten.github.io//research/2015/09/01/IBD.html</guid>
+        <link>http://localhost:4000//research/2015/09/01/IBD.html</link>
+        <guid isPermaLink="true">http://localhost:4000//research/2015/09/01/IBD.html</guid>
         
         <category>isolation-by-distance</category>
         
@@ -257,181 +249,182 @@ Configuration:
         
         <category>distributions</category>
         
+        <category>simulation</category>
         
-        <category>research</category>
+        
+        <category>Research</category>
         
       </item>
     
       <item>
         <title>Python Virtual Environments</title>
-        <description>&lt;p&gt;Often times a Python project will require a specific package version that is different than the global package. Virtual environments are helpful in this scenario because they create an isolated Python environment within a directory with its own set of packages.  If virtualenv is installed, this will allow a user to install packages using pip without requiring root access. &lt;/p&gt;
+        <description>&lt;p&gt;Python projects often require a specific package version that may be different than the global package. Virtual environments are helpful in this scenario because they create an isolated Python environment within a directory with its own set of packages. Different environments can be created for specific projects and the dependent modules can easily be listed in a requirements.txt file for project release.&lt;/p&gt;
 
 &lt;p&gt;To install virtualenv:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ pip install virtualenv
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip install virtualenv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Move to the project directory that you want to isolate within the environment&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ cd project_folder
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd project_folder
 $ virtualenv env_name
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Specify which version of Python&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ virtualenv -p /usr/bin/python2.7 env_name
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ virtualenv -p /usr/bin/python2.7 env_name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Activate the environment&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ source env_name/bin/activate
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ source env_name/bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The name of the environment should now appear to the left of the shell prompt.
 While inside the environment any packages that are installed using pip will be placed in the env_name directory.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;(env_name)$ pip install package_name
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(env_name)$ pip install package_name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;To leave the virtual environment&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ deactivate
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ deactivate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;To delete a virtual environment &lt;/p&gt;
+&lt;p&gt;To delete a virtual environment&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ rm -rf env_name
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ rm -rf env_name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;From &lt;a href=&quot;http://docs.python-guide.org/en/latest/dev/virtualenvs/&quot;&gt;http://docs.python-guide.org/en/latest/dev/virtualenvs/&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;duplicate-a-virtual-environment&quot;&gt;Duplicate a virtual environment&lt;/h3&gt;
-&lt;p&gt;Generate a requirements file that contains all of the packages installed on the virtual environment.  &lt;/p&gt;
+&lt;p&gt;Generate a requirements file that contains all of the packages installed on the virtual environment.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;pip freeze &amp;gt; requirements.txt
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip freeze &amp;gt; requirements.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This will generate a requirements.txt file.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Django==1.3
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Django==1.3
 Fabric==1.0.1
 etc...
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;You may edit the version number in the file if you need. Copy this file to the directory of the new enviroment then activate the new virtual environment and run&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;pip install -r requirements.txt
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install -r requirements.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;pip will automatically download and install all the python modules listed in your requirements.txt file, at whatever version you sepcified.&lt;/p&gt;
 
 &lt;p&gt;from &lt;a href=&quot;http://stackoverflow.com/questions/7438681/duplicate-virtualenv&quot;&gt;http://stackoverflow.com/questions/7438681/duplicate-virtualenv&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 26 Apr 2015 01:43:59 -0700</pubDate>
-        <link>http://tfursten.github.io//programming/2015/04/26/VirtualEnv.html</link>
-        <guid isPermaLink="true">http://tfursten.github.io//programming/2015/04/26/VirtualEnv.html</guid>
+        <link>http://localhost:4000//tutorials/2015/04/26/VirtualEnv.html</link>
+        <guid isPermaLink="true">http://localhost:4000//tutorials/2015/04/26/VirtualEnv.html</guid>
         
         <category>python</category>
         
         
-        <category>programming</category>
+        <category>Tutorials</category>
         
       </item>
     
       <item>
         <title>Portable Dotfiles Using Git &amp; Github</title>
-        <description>&lt;p&gt;This set of notes covers how to effectively manage custom dotfiles so they may easily be transferred between different machines. The notes include a script from &lt;a href=&quot;http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/&quot;&gt;Using Git and Github to Manage your Dotfiles&lt;/a&gt; by MICHAEL SMALLEY. Once the dotfiles repository is cloned into the home directory, this script will create symbolic links to the custom configuration files.  It will also move any existing dotfiles that match those in the cloned directory into a dotfiles_old directory.  &lt;/p&gt;
+        <description>&lt;p&gt;Effectively manage custom dotfiles so they are easily transferrable between different machines. The notes include a script from &lt;a href=&quot;http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/&quot;&gt;Using Git and Github to Manage your Dotfiles&lt;/a&gt; by MICHAEL SMALLEY. Once the dotfiles repository is cloned into the home directory, this script will create symbolic links to the custom configuration files.  It will also move any existing dotfiles that match those in the cloned directory into a dotfiles_old directory.&lt;/p&gt;
 
 &lt;h3 id=&quot;organize-dotfiles-in-new-directory&quot;&gt;Organize dotfiles in new directory&lt;/h3&gt;
-&lt;p&gt;In the home directory create a new directory for the dotfiles  &lt;/p&gt;
+&lt;p&gt;In the home directory create a new directory for the dotfiles&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ mkdir ~/dotfiles
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir ~/dotfiles
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Move the dot files into this directory.  &lt;/p&gt;
+&lt;p&gt;Move the dot files into this directory.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$mv ~./.bashrc ~/dotfiles
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$mv ~./.bashrc ~/dotfiles
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;For portability add this makesymlinks.sh install script to the dotfiles directory  &lt;/p&gt;
+&lt;p&gt;For portability add this makesymlinks.sh install script to the dotfiles directory&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#!/bin/bash  
-############################
-# .make.sh  
-# This script creates symlinks from the home directory to any desired  dotfiles in ~/dotfiles  
-############################  
-  
-########## Variables  
-  
-dir=~/dotfiles                    # dotfiles directory  
-olddir=~/dotfiles_old             # old dotfiles backup directory  
-files=&quot;bashrc vimrc vim zshrc oh-my-zsh private scrotwm.conf   Xresources&quot;    # list of files/folders to symlink in homedir  
-  
-##########  
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash  &lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;############################&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# .make.sh  &lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# This script creates symlinks from the home directory to any desired  dotfiles in ~/dotfiles  &lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;############################  &lt;/span&gt;
 
-# create dotfiles_old in homedir
-echo -n &quot;Creating $olddir for backup of any existing dotfiles in ~ ...&quot;
-mkdir -p $olddir
-echo &quot;done&quot;
+&lt;span class=&quot;c&quot;&gt;########## Variables  &lt;/span&gt;
 
-# change to the dotfiles directory
-echo -n &quot;Changing to the $dir directory ...&quot;
-cd $dir
-echo &quot;done&quot;
+&lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/dotfiles                    &lt;span class=&quot;c&quot;&gt;# dotfiles directory  &lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;olddir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/dotfiles_old             &lt;span class=&quot;c&quot;&gt;# old dotfiles backup directory  &lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bashrc vimrc vim zshrc oh-my-zsh private scrotwm.conf   Xresources&quot;&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;# list of files/folders to symlink in homedir  &lt;/span&gt;
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
-for file in $files; do
-    echo &quot;Moving any existing dotfiles from ~ to $olddir&quot;
-    mv ~/.$file ~/dotfiles_old/
-    echo &quot;Creating symlink to $file in home directory.&quot;
-    ln -s $dir/$file ~/.$file
-done
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c&quot;&gt;##########  &lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# create dotfiles_old in homedir&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Creating &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$olddir&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; for backup of any existing dotfiles in ~ ...&quot;&lt;/span&gt;
+mkdir &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$olddir&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;done&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# change to the dotfiles directory&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Changing to the &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; directory ...&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;done&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;file &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Moving any existing dotfiles from ~ to &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$olddir&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    mv ~/.&lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt; ~/dotfiles_old/
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Creating symlink to &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; in home directory.&quot;&lt;/span&gt;
+    ln &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt; ~/.&lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;create-gitgithub-repository&quot;&gt;Create Git/Github Repository&lt;/h3&gt;
 &lt;p&gt;Initialize a new Git repo&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ cd ~/dotfiles
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd ~/dotfiles
 $ git init
 $ git add makesymlinks.sh
 $ git add .bashrc
 $ git commit -m &quot;first commit of dotfiles&quot;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Create a new repository on Github and copy the information from the new repo&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ git remote add origin git@github.com:mygithubusername/dotfiles.git
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git remote add origin git@github.com:mygithubusername/dotfiles.git
 $ git push origin master
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;cloning-to-another-machine&quot;&gt;Cloning to Another Machine&lt;/h3&gt;
 &lt;p&gt;Move to home directory of new machine&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$git clone git://github.com/&amp;lt;mygithubusername&amp;gt;/dotfiles.git
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$git clone git://github.com/&amp;lt;mygithubusername&amp;gt;/dotfiles.git
 $cd ~/dotfiles
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Make script executable&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;chmod _x makesymlinks.sh
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chmod +x makesymlinks.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Run script&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;./makesymlinks.sh
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./makesymlinks.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Thu, 23 Apr 2015 00:00:00 -0700</pubDate>
-        <link>http://tfursten.github.io//programming/2015/04/23/PortableDotFiles.html</link>
-        <guid isPermaLink="true">http://tfursten.github.io//programming/2015/04/23/PortableDotFiles.html</guid>
+        <link>http://localhost:4000//tutorials/2015/04/23/PortableDotFiles.html</link>
+        <guid isPermaLink="true">http://localhost:4000//tutorials/2015/04/23/PortableDotFiles.html</guid>
         
         <category>dot</category>
         
         <category>files</category>
         
         
-        <category>programming</category>
+        <category>Tutorials</category>
         
       </item>
     

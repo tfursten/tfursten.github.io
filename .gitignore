@@ -1,6 +1,10 @@
 /img/ign/
-_site/
-.sass-cache/
+_site/*
+.sass-cache/*
 .jekyll-metadata
+<<<<<<< HEAD
 Gemfile.lock
 .vscode/*
+=======
+.DS_Store
+>>>>>>> af36cefe65882f0596c5305b8a47adeb289aadab
