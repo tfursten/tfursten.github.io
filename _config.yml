@@ -1,5 +1,5 @@
 # External gems
-gems: [jekyll-gist, jekyll-sitemap]
+plugins: [jekyll-gist, jekyll-sitemap]
 
 # Site settings
 title: Tara Furstenau, Ph.D.
@@ -11,7 +11,7 @@ url: "http://tfursten.github.io" # the base hostname & protocol for your site
 cover: "assets/header_image2.jpg"
 # Build settings
 markdown: kramdown
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 paginate: 2
 paginate_path: "/page:num/"
 
