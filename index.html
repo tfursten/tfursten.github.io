@@ -28,7 +28,7 @@ layout: default
     	<div class="post-categories">
     	{% if post.categories %}in {% for cat in post.categories %}
     	  {% if site.jekyll-archives %}
-    		<a href="{{ site.baseurl }}category/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
+    		<a href="{{ "/" | absolute_url }}category/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
     	  {% else %}
     	  <span>{{ cat | capitalize }}</span>{% if forloop.last == false %}, {% endif %}
     	  {% endif %}
@@ -46,14 +46,14 @@ layout: default
 	<p>
 		{% if paginator.previous_page %}
       {% if paginator.page == 2 %}
-      <a class="newer-posts" href="{{ site.baseurl }}" style="text-decoration:none !important;">
+      <a class="newer-posts" href="{{ "/" | absolute_url }}" style="text-decoration:none !important;">
 		    <span class="fa-stack fa-lg">
 				  <i class="fa fa-square fa-stack-2x"></i>
 				  <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
 				</span>
 			</a>
       {% else %}
-      <a class="newer-posts" href="{{ site.baseurl }}page{{ paginator.previous_page }}" style="text-decoration:none !important;">
+      <a class="newer-posts" href="{{ "/" | absolute_url }}page{{ paginator.previous_page }}" style="text-decoration:none !important;">
 		    <span class="fa-stack fa-lg">
 				  <i class="fa fa-square fa-stack-2x"></i>
 				  <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
