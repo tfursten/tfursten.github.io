@@ -7,7 +7,7 @@ permalink: /CV/
 Tara N. Furstenau, Ph.D.
 ============
 
-[<i class="glyphicon glyphicon-download-alt" style="color:myblue"></i> Download PDF Version]({{ site.baseurl }}assets/TaraFurstenauCV.pdf)
+[<i class="glyphicon glyphicon-download-alt" style="color:myblue"></i> Download PDF Version]({{ "/assets/TaraFurstenauCV.pdf" | absolute_url }})
 
 | Contact Information |                   |
 |-----------|-----------------------------|
