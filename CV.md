@@ -18,8 +18,12 @@ Tara N. Furstenau, Ph.D.
 
 Research Experience
 ----------
+2018-Present
+:   **Assistant Research Professor**  
+The School of Informatics, Computing, and Cyber Systems  
+Northern Arizona University · Flagstaff, AZ  
 
-2016-Present
+2016-2017
 :   **Postdoctoral Scholar** in Viacheslav Fofanov’s lab  
 The School of Informatics, Computing, and Cyber Systems  
 Northern Arizona University · Flagstaff, AZ  
