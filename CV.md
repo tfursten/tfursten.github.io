@@ -238,7 +238,7 @@ Service and Outreach
 Professional Development
 --------------------------
 April 2018  
-:   **AnacondaCon**
+:   **AnacondaCon**  
 Anaconda, Inc. · Austin, TX  
 
 June 2017  
