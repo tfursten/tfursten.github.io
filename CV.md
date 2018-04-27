@@ -60,7 +60,7 @@ Education
 
 Publications
 --------------------
-Fofanov, VY, **Furstenau, TN**, Sanchez D, Hepp, C, Cocking, J, Sobek, C, Pagel, N, Walker, F, and CL Chambers. Guano exposed: Impact of aerobic conditions on bat fecal microbiome. *Methods in Ecology and Evolution*. In Press
+Fofanov, VY*, **Furstenau, TN***, Sanchez D, Hepp, C, Cocking, J, Sobek, C, Pagel, N, Walker, F, and CL Chambers. (2018). Guano exposed: Impact of aerobic conditions on bat fecal microbiota. *Ecology and Evolution*. 00:1-12. [doi:10.1002/ece3.4084](https://doi.org/10.1002/ece3.4084)
 
 **Furstenau, TN**, and RA Cartwright. (2017) The impact of self-incompatibility systems on the prevention of biparental inbreeding. *PeerJ* 5:e4085 [doi:10.7717/peerj.4085](https://doi.org/10.7717/peerj.4085)
 
@@ -123,6 +123,11 @@ Molecular and Cellular Biology Colloquium
 The School of Life Sciences · Arizona State University · Tempe, AZ  
 
 ### Posters
+April 2018  
+:   **Culturing and Sequencing Causative Agents of Early Childhood Caries**  
+College of Engineering, Forestry, and Natural Sciences Undergraduate Research and Design Symposium  
+Flagstaff, AZ  
+(Presented by Undergraduate Mentee, Daryn Erickson)
 
 June 2017  
 :   **Effects of Exposure on Bat Guano Microbiome**  
