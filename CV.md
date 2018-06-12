@@ -60,16 +60,15 @@ Education
 
 Publications
 --------------------
-Fofanov, VY*, **Furstenau, TN***, Sanchez D, Hepp, C, Cocking, J, Sobek, C, Pagel, N, Walker, F, and CL Chambers. (2018). Guano exposed: Impact of aerobic conditions on bat fecal microbiota. *Ecology and Evolution*. 00:1-12. [doi:10.1002/ece3.4084](https://doi.org/10.1002/ece3.4084)
+**Furstenau, TN**, Cocking, J, Sahl, JW, and VY Fofanov. (2018). Variant site strain typer (VaST): Efficient strain typing using a minimal number of variant genomic sites. *BMC Bioinformatics*. 19:222:1-13. [doi:10.1186/s12859-018-2225-z](https://doi.org/10.1186/s12859-018-2225-z)
+
+Fofanov, VY*, **Furstenau, TN***, Sanchez D, Hepp, C, Cocking, J, Sobek, C, Pagel, N, Walker, F, and CL Chambers. (2018). Guano exposed: Impact of aerobic conditions on bat fecal microbiota. *Ecology and Evolution*. 00:1-12. [doi:10.1002/ece3.4084](https://doi.org/10.1002/ece3.4084) (Cover Article)
 
 **Furstenau, TN**, and RA Cartwright. (2017) The impact of self-incompatibility systems on the prevention of biparental inbreeding. *PeerJ* 5:e4085 [doi:10.7717/peerj.4085](https://doi.org/10.7717/peerj.4085)
 
 **Furstenau, TN**, and RA Cartwright (2016). The effect of the dispersal kernel on isolation-by-distance in a continuous population. *PeerJ* 4:e1848. [doi:10.7717/peerj.1848](https://doi.org/10.7717/peerj.1848)
 
 Pizzio GA, Paez-Valencia J, Khadilkar AS, Regmi K, Patron-Soberano A, Zhang S, Sanchez-Lares J, **Furstenau T**, Li J, Sanchez-Gomez C, Valencia-Mayoral P, Yadav UP, Ayre BG, and RA Gaxiola (2015). *Arabidopsis* proton-pumping pyrophosphatase AVP1 expresses strongly in phloem where it is required for PPi metabolism and photosynthate partitioning. *Plant Physiology* 167:1541-1553. [doi:10.1104/pp.114.254342](http://dx.doi.org/10.1104/pp.114.254342)
-
-### Submitted
-**Furstenau, TN**, Cocking, J, Sahl, JW, and VY Fofanov. Variant Site Strain Typer (VaST): Efficient strain typing using a minimal number of variant genomic sites. Accepted with revisions to *BMC Bioinformatics*.
 
 
 
