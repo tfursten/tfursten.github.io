@@ -60,6 +60,8 @@ Education
 
 Publications
 --------------------
+Hepp, CM, Cocking, JH, Valentine, M, Young, SJ, Damian, D, Sheridan-Crow, K, Fofanov, VY, **Furstenau, TN**, Busch JD, Erickson DE, Lancione, RC, Smith, K. Will, J, Townsend, J, Keim, PS, Engelthaler, DM. Phylogenetic analysis of West Nile Virus in Maricopa County, Arizona: Evidence of endemic and ephemeral circulation of strains in two major lineages.  PLOS ONE. (Accepted)  
+
 **Furstenau, TN**, Cocking, J, Sahl, JW, and VY Fofanov. (2018). Variant site strain typer (VaST): Efficient strain typing using a minimal number of variant genomic sites. *BMC Bioinformatics*. 19:222:1-13. [doi:10.1186/s12859-018-2225-z](https://doi.org/10.1186/s12859-018-2225-z)
 
 Fofanov, VY*, **Furstenau, TN***, Sanchez D, Hepp, C, Cocking, J, Sobek, C, Pagel, N, Walker, F, and CL Chambers. (2018). Guano exposed: Impact of aerobic conditions on bat fecal microbiota. *Ecology and Evolution*. 00:1-12. [doi:10.1002/ece3.4084](https://doi.org/10.1002/ece3.4084) (Cover Article)
@@ -77,6 +79,7 @@ Scientific Software
 
 | Name    | Description                                                                                                                                                                             | Language |                  Repository                  |
 |---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------:|:--------------------------------------------:|
+| MTSv    | Metagenomic binning and analysis tool  | Python/Rust  |  [Github](https://github.com/FofanovLab/MTSv) [Conda](https://anaconda.org/Tara_Furstenau/mtsv) |
 | VaST    | **Va**riant Site **S**train **T**yper: An algorithm which finds the minimum number of variant genomic sites for strain differentiation.                                                                                                                                                       |  Python  | [Github](https://github.com/FofanovLab/VaST) |
 | NbMCMC  | Bayesian inference of neighborhood size using composite marginal likelihoods                                                                                                                |  Python  | [Github](https://github.com/tfursten/nbmcmc) |
 | SI-Sim  | Self-Incompatibility Simulation:    A spatially explicit individual-based model of a diploid plant population that reproduces according   to five different models of self-incompatibility. |    C++   | [Github](https://github.com/tfursten/SI-cpp) |
@@ -122,6 +125,29 @@ Molecular and Cellular Biology Colloquium
 The School of Life Sciences · Arizona State University · Tempe, AZ  
 
 ### Posters
+June 2018  
+: **Strain level characterization of select pathogens from complex shotgun metagenomic sequence data.**  
+American Society for Microbiology Microbe  
+Atlanta, GA
+
+June 2018  
+: **Efficient bacterial strain typing using highly multiplexed amplicon sequencing panels**  
+American Society for Microbiology Microbe  
+Atlanta, GA 
+
+April 2018  
+: **Tracing lineages of *Stphylococcus aureus* using minority variant approaches**  
+Arizona/Southern Nevada Chapter of the American Society for Microbiology Annual Meeting  
+Las Vegas, NV  
+(Presented by Undergraduate Mentee, Ryan Lancione)
+
+
+April 2018  
+: **Tracing lineages of *Staphylococcus aureus* using minority variant approaches**  
+College of Engineering, Forestry, and Natural Scieences Undergraduate Research and Design Symposium
+Flagstaff, AZ 
+(Presented by Undergraduate Mentee, Ryan Lancione)
+
 April 2018  
 :   **Culturing and Sequencing Causative Agents of Early Childhood Caries**  
 College of Engineering, Forestry, and Natural Sciences Undergraduate Research and Design Symposium  
@@ -225,6 +251,11 @@ Helper
 Wrigley Institute of Sustainability · Arizona State University · Tempe, AZ  
 
 ### Mentoring
+2018  
+:   **Honor's Thesis Committee Member**  
+Shelby Prestwich  
+Thesis: A Review of the Human Vermiform Appendix and its Proposed Function  
+
 2011-2013  
 :   **Honor's Thesis**  
 Sean Wilson  
