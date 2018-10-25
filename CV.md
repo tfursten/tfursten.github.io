@@ -60,7 +60,7 @@ Education
 
 Publications
 --------------------
-Hepp, CM, Cocking, JH, Valentine, M, Young, SJ, Damian, D, Sheridan-Crow, K, Fofanov, VY, **Furstenau, TN**, Busch JD, Erickson DE, Lancione, RC, Smith, K. Will, J, Townsend, J, Keim, PS, Engelthaler, DM. Phylogenetic analysis of West Nile Virus in Maricopa County, Arizona: Evidence of endemic and ephemeral circulation of strains in two major lineages.  PLOS ONE. (Accepted)  
+Hepp, CM, Cocking, JH, Valentine, M, Young, SJ, Damian, D, Sheridan-Crow, K, Fofanov, VY, **Furstenau, TN**, Busch JD, Erickson DE, Lancione, RC, Smith, K. Will, J, Townsend, J, Keim, PS, Engelthaler, DM. Phylogenetic analysis of West Nile Virus in Maricopa County, Arizona: Evidence of endemic and ephemeral circulation of strains in two major lineages.  *PLOS ONE*. (Accepted)  
 
 **Furstenau, TN**, Cocking, J, Sahl, JW, and VY Fofanov. (2018). Variant site strain typer (VaST): Efficient strain typing using a minimal number of variant genomic sites. *BMC Bioinformatics*. 19:222:1-13. [doi:10.1186/s12859-018-2225-z](https://doi.org/10.1186/s12859-018-2225-z)
 
@@ -136,7 +136,7 @@ American Society for Microbiology Microbe
 Atlanta, GA 
 
 April 2018  
-: **Tracing lineages of *Stphylococcus aureus* using minority variant approaches**  
+: **Tracing lineages of *Staphylococcus aureus* using minority variant approaches**  
 Arizona/Southern Nevada Chapter of the American Society for Microbiology Annual Meeting  
 Las Vegas, NV  
 (Presented by Undergraduate Mentee, Ryan Lancione)
@@ -144,8 +144,8 @@ Las Vegas, NV
 
 April 2018  
 : **Tracing lineages of *Staphylococcus aureus* using minority variant approaches**  
-College of Engineering, Forestry, and Natural Scieences Undergraduate Research and Design Symposium
-Flagstaff, AZ 
+College of Engineering, Forestry, and Natural Sciences Undergraduate Research and Design Symposium  
+Flagstaff, AZ  
 (Presented by Undergraduate Mentee, Ryan Lancione)
 
 April 2018  
