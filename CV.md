@@ -141,7 +141,6 @@ Arizona/Southern Nevada Chapter of the American Society for Microbiology Annual 
 Las Vegas, NV  
 (Presented by Undergraduate Mentee, Ryan Lancione)
 
-
 April 2018  
 : **Tracing lineages of *Staphylococcus aureus* using minority variant approaches**  
 College of Engineering, Forestry, and Natural Sciences Undergraduate Research and Design Symposium  
