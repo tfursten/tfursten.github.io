@@ -60,7 +60,7 @@ Education
 
 Publications
 --------------------
-Hepp, CM, Cocking, JH, Valentine, M, Young, SJ, Damian, D, Sheridan-Crow, K, Fofanov, VY, **Furstenau, TN**, Busch JD, Erickson DE, Lancione, RC, Smith, K. Will, J, Townsend, J, Keim, PS, Engelthaler, DM. Phylogenetic analysis of West Nile Virus in Maricopa County, Arizona: Evidence of endemic and ephemeral circulation of strains in two major lineages.  *PLOS ONE*. (Accepted)  
+Hepp, CM, Cocking, JH, Valentine, M, Young, SJ, Damian, D, Sheridan-Crow, K, Fofanov, VY, **Furstenau, TN**, Busch JD, Erickson DE, Lancione, RC, Smith, K. Will, J, Townsend, J, Keim, PS, Engelthaler, DM. Phylogenetic analysis of West Nile Virus in Maricopa County, Arizona: Evidence of endemic and ephemeral circulation of strains in two major lineages.  *PLOS ONE*. 13(11): e0205801. [doi:10.1371/journal.pone.0205801](https://doi.org/10.1371/journal.pone.0205801)  
 
 **Furstenau, TN**, Cocking, J, Sahl, JW, and VY Fofanov. (2018). Variant site strain typer (VaST): Efficient strain typing using a minimal number of variant genomic sites. *BMC Bioinformatics*. 19:222:1-13. [doi:10.1186/s12859-018-2225-z](https://doi.org/10.1186/s12859-018-2225-z)
 
